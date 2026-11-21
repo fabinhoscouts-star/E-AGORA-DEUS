@@ -17,6 +17,7 @@
   </header>
   <main id="app" tabindex="-1">
     <section class="screen active" id="home-screen">
+      <div class="test-notice" role="status"><strong>Versão de teste</strong><span>Algumas informações institucionais e a política de privacidade aguardam validação. O envio de perguntas está desactivado.</span></div>
       <div class="hero hero-showcase">
         <div class="hero-copy">
           <p class="eyebrow">Seminário São José Cabo Verde</p>
@@ -56,13 +57,15 @@
     <section class="screen" id="questions-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e acompanhamento</p><h1>Pergunta aos Seminaristas</h1><div class="voice-intro"><div class="voice-symbol" aria-hidden="true">♫</div><div><h2>A tua voz, em confiança</h2><p>Um espaço para escutar, esclarecer dúvidas e acompanhar quem procura compreender melhor o seu caminho.</p></div></div><div id="questions-content" class="content-panel"></div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
 
     <section class="screen" id="settings-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Aplicação</p><h1>Definições</h1><div class="content-panel"><h2>Privacidade e informação</h2><p>Consulta a informação sobre a forma como os dados são tratados nesta aplicação.</p><button class="secondary" data-open="privacy-screen">Política de Privacidade →</button></div></section>
-    <section class="screen" id="privacy-screen"><button class="back" data-open="settings-screen">← Definições</button><p class="eyebrow">Definições · Privacidade</p><h1>Política de Privacidade</h1><div class="privacy-lock"><span aria-hidden="true">▣</span><p>A tua privacidade é importante para nós.</p></div><div class="content-panel privacy-list">
-      <details><summary>O que recolhemos?</summary><p>Nesta versão, a aplicação não envia nem guarda as perguntas que escreves. As reflexões dos jogos permanecem apenas na página enquanto a utilizas.</p></details>
-      <details><summary>Como usamos os dados?</summary><p>As funcionalidades de envio de mensagens ainda não estão activas. Por isso, não existe nesta versão um tratamento de mensagens submetidas através da aplicação.</p></details>
-      <details><summary>A tua privacidade</summary><p>Evita escrever dados pessoais sensíveis nos campos de reflexão ou nos rascunhos. Não uses este espaço para comunicar situações urgentes.</p></details>
-      <details><summary>Os teus direitos</summary><p>Quando o canal de mensagens for activado, esta secção deverá identificar claramente a entidade responsável, os direitos aplicáveis e a forma de os exercer.</p></details>
-      <details><summary>Contactos</summary><p>Para informação institucional, consulta os canais oficiais do Seminário São José indicados na secção «Conhece o Seminário».</p></details>
-    </div><div class="notice">Esta é uma apresentação informativa provisória. A política institucional completa deverá ser validada e publicada pelo Seminário antes de activar qualquer recolha de dados.</div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
+    <section class="screen" id="privacy-screen"><button class="back" data-open="settings-screen">← Definições</button><p class="eyebrow">Definições · Privacidade</p><h1>Política de Privacidade</h1><div class="privacy-lock"><span aria-hidden="true">▣</span><p>Informação de privacidade — versão de teste</p></div><div class="content-panel privacy-list">
+      <details open><summary>Estado actual da aplicação</summary><p>Esta versão é apresentada para testes. O formulário «Pergunta aos Seminaristas» apenas prepara um rascunho temporário no próprio ecrã: não envia a pergunta, não cria uma conta e não a guarda numa base de dados. As respostas e reflexões dos jogos também não são submetidas à equipa do Seminário.</p></details>
+      <details><summary>Dados introduzidos pelo utilizador</summary><p>Não introduzas nomes, contactos, dados de saúde, informações familiares delicadas ou outros dados pessoais nos campos de reflexão. O rascunho da pergunta existe apenas enquanto a página permanece aberta e perde-se ao sair ou actualizar a página.</p></details>
+      <details><summary>Dados técnicos de acesso</summary><p>A aplicação está alojada através de serviços de terceiros. O fornecedor de alojamento poderá tratar dados técnicos necessários à entrega, segurança e funcionamento do serviço, de acordo com a sua própria configuração e política. A configuração concreta, os registos gerados e os respectivos prazos ainda têm de ser confirmados antes da publicação institucional definitiva.</p></details>
+      <details><summary>Responsável pelo tratamento e contactos</summary><p>A identificação jurídica da entidade responsável pelo tratamento, o endereço de contacto para assuntos de privacidade e o procedimento para exercer direitos ainda não foram confirmados nesta versão. Esta informação deverá ser preenchida e aprovada pelo Seminário antes de activar qualquer formulário ou recolha de dados.</p></details>
+      <details><summary>Direitos e reclamações</summary><p>A legislação cabo-verdiana prevê direitos relativos à informação, acesso e, nos termos legais, rectificação, apagamento ou bloqueio e oposição ao tratamento. Para informação oficial, consulta a Comissão Nacional de Protecção de Dados (CNPD). Os meios concretos para exercer os direitos junto do responsável da aplicação serão indicados na política institucional final.</p><p><a class="secondary-link" href="https://www.cnpd.cv/direitos/" target="_blank" rel="noopener noreferrer">Direitos dos titulares — CNPD ↗</a></p></details>
+      <details><summary>Legislação e autoridade de controlo</summary><p>O enquadramento geral inclui a Lei n.º 133/V/2001, alterada, designadamente, pela Lei n.º 41/VIII/2013 e pela Lei n.º 121/IX/2021, bem como o artigo 45.º da Constituição da República de Cabo Verde. A aplicação concreta ao projecto deve ser confirmada por quem tenha competência jurídica.</p><p><a class="secondary-link" href="https://www.cnpd.cv/legislacao/" target="_blank" rel="noopener noreferrer">Legislação — CNPD ↗</a> <a class="secondary-link" href="https://www.parlamento.cv/constituicao/" target="_blank" rel="noopener noreferrer">Constituição — Assembleia Nacional ↗</a></p></details>
+      <details><summary>Mensagens e situações urgentes</summary><p>O envio de mensagens está desactivado. Esta aplicação não é um serviço de emergência nem garante acompanhamento imediato ou confidencialidade de situações comunicadas por outros canais. Em caso de perigo ou urgência, procura directamente ajuda junto dos serviços competentes e de uma pessoa de confiança.</p></details>
+    </div><div class="notice"><strong>Importante:</strong> este texto é uma informação provisória para testes, não uma política de privacidade institucional juridicamente validada. Antes de recolher qualquer dado, o Seminário deve confirmar o responsável pelo tratamento, contactos, fornecedores e serviços utilizados, finalidades, fundamentos, prazos de conservação, direitos, procedimentos e medidas de segurança, e aprovar o texto final.</div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
   </main>
   <nav class="bottom-nav" aria-label="Navegação principal">
     <button class="nav-item active" data-open="home-screen"><span>⌂</span>Início</button>
@@ -71,6 +74,10 @@
     <button class="nav-item" data-open="seminary-screen"><span>▤</span>Seminário</button>
     <button class="nav-item" data-open="questions-screen"><span>◌</span>Perguntas</button>
   </nav>
+  <footer class="site-footer">
+    <p><strong>Rumo aos 70 anos...</strong> caminhar juntos: escutar, discernir, e responder com alegria ao Senhor da Messe!</p>
+    <small>Seminário São José · Cabo Verde · Aplicação em fase de testes</small>
+  </footer>
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>
