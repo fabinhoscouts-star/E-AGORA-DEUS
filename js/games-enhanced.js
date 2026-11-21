@@ -27,7 +27,6 @@ function renderChoiceGame(target,groups,title){
  if(e.target.closest("[data-next]")){qi++;if(qi>=groups[gi].items.length){state.done.add(gi);home();}else question();}
  if(e.target.closest("[data-categories]"))home();
  if(e.target.closest("[data-restart]")){state.score=0;state.earned.clear();state.done.clear();gi=0;qi=0;home();}
- if(e.target.closest("[data-save-verse]"))bindSave(el);
  });
  home();
 }
