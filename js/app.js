@@ -1,15 +1,45 @@
-const screens=[...document.querySelectorAll(".screen")];
-const navItems=[...document.querySelectorAll(".nav-item")];
-function showScreen(id){screens.forEach(s=>s.classList.toggle("active",s.id===id));navItems.forEach(n=>n.classList.toggle("active",n.dataset.open===id));document.getElementById("app").focus({preventScroll:true});window.scrollTo({top:0,behavior:"smooth"});}
-document.addEventListener("click",e=>{const target=e.target.closest("[data-open]");if(target)showScreen(target.dataset.open);});
-document.getElementById("brand-home").addEventListener("click",()=>showScreen("home-screen"));
-const starter={
-"vocation-content":{title:"Começa por reflectir",text:"Deus e o meu futuro",prompt:"Que dons reconheces em ti e como poderias colocá-los ao serviço dos outros?",reference:"1 Samuel 3,1-10"},
-"who-content":{title:"Conhecer-te é crescer",text:"Os meus talentos",prompt:"Que capacidade tua gostarias de desenvolver?",reference:"Salmo 139,14"},
-"truth-content":{title:"Escolhe uma proposta",text:"Verdade",prompt:"Que valor gostarias de viver com mais coerência no teu dia-a-dia?",reference:"1 Coríntios 16,14"},
-"bottle-content":{title:"A tua cor: verde",text:"Atitude em acção",prompt:"Pensa numa pessoa que possa precisar da tua ajuda. Que gesto concreto podes fazer?",reference:"Tiago 2,17"},
-"whatif-content":{title:"Uma situação para pensar",text:"Amizades",prompt:"O teu grupo começa a gozar com alguém. Como podes agir sem humilhar ninguém?",reference:"Mateus 7,12"},
-"word-content":{title:"Confiança",text:"«Confia no Senhor de todo o teu coração.»",prompt:"Leva esta Palavra para a tua vida: em que situação precisas de confiar mais em Deus?",reference:"Provérbios 3,5-6"}
-};
-for(const [id,item] of Object.entries(starter)){const el=document.getElementById(id);if(!el)continue;el.innerHTML=`<h2>${item.title}</h2><p class="eyebrow">${item.text}</p><p>${item.prompt}</p><p class="note">Para rezar e reflectir: ${item.reference}</p>`;}
-if("serviceWorker" in navigator && location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(err=>console.warn("Service worker não registado:",err)));
+import {vocation,who,truth,bottle,whatif,word} from "./content.js";
+const $=s=>document.querySelector(s);
+const $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const screens=$$(".screen"),navItems=$$(".nav-item");
+function showScreen(id){screens.forEach(s=>s.classList.toggle("active",s.id===id));navItems.forEach(n=>n.classList.toggle("active",n.dataset.open===id));window.scrollTo({top:0,behavior:"smooth"});}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-open]");if(b)showScreen(b.dataset.open);});
+$("#brand-home").addEventListener("click",()=>showScreen("home-screen"));
+function panel(id,html){const el=document.getElementById(id);if(el)el.innerHTML=html;}
+function actionButtons(nextLabel="Outra proposta"){return `<div class="actions"><button class="secondary" data-action="skip">${nextLabel}</button><button class="quiet" data-action="home">Voltar ao início</button></div>`;}
+function renderChoiceGame(target,groups,gameKey){
+ let groupIndex=0,itemIndex=0,done=new Set();
+ const el=$("#"+target);
+ function home(){el.innerHTML=`<h2>Escolhe uma categoria</h2><div class="category-list">${groups.map((g,i)=>`<button class="category-button" data-group="${i}"><strong>${esc(g.name)}</strong><span>${g.items.length} propostas</span></button>`).join("")}</div>${done.size?'<p class="note">Já exploraste algumas propostas. Podes voltar a qualquer categoria.</p>':""}`;}
+ function question(){const g=groups[groupIndex],item=g.items[itemIndex];const open=g.kind==="open";el.innerHTML=`<p class="eyebrow">${esc(g.name)} · ${itemIndex+1}/${g.items.length}</p><h2>${esc(item[0])}</h2>${open?`<p>Não há uma resposta certa ou errada. Reserva um momento para pensar.</p><textarea class="reflection" rows="4" placeholder="Se quiseres, escreve aqui a tua reflexão. Não será enviada nem guardada."></textarea>`:`<div class="answer-list">${[item[1],...item[2]].map((v,i)=>`<button class="answer" data-answer="${i}">${esc(v)}</button>`).join("")}</div><div id="feedback" aria-live="polite"></div>`}${open?'<p class="note">A tua reflexão fica apenas nesta página e desaparece quando saíres.</p>':""}<p class="reference">Para aprofundar: ${esc(item[4]||"")}</p><div class="actions"><button class="secondary" data-action="next">Próxima pergunta</button><button class="quiet" data-action="categories">Categorias</button></div>`;}
+ el.addEventListener("click",e=>{
+  const cat=e.target.closest("[data-group]");if(cat){groupIndex=Number(cat.dataset.group);itemIndex=0;question();return;}
+  const ans=e.target.closest("[data-answer]");if(ans){const item=groups[groupIndex].items[itemIndex];const feedback=$("#feedback");if(groups[groupIndex].kind==="choice"){const correct=Number(ans.dataset.answer)===0;feedback.innerHTML=`<div class="feedback"><strong>${correct?"Boa reflexão.":"Pensa também nesta possibilidade."}</strong><p>${esc(item[3])}</p></div>`;el.querySelectorAll(".answer").forEach(b=>b.disabled=true);ans.classList.add("selected");}return;}
+  const action=e.target.closest("[data-action]")?.dataset.action;if(action==="next"||action==="skip"){itemIndex++;if(itemIndex>=groups[groupIndex].items.length){done.add(groupIndex);home();}else question();}if(action==="categories")home();if(action==="home")showScreen("home-screen");
+ });
+ home();
+}
+renderChoiceGame("vocation-content",vocation,"vocation");
+const whoGroups=["Os meus talentos","As minhas qualidades","Os meus valores","As minhas fragilidades"].map(name=>({name,kind:"choice",items:who.filter(q=>q[0]===name).map(q=>[q[1],q[2],[q[3][0],q[3][1]],q[4],q[5]])}));
+renderChoiceGame("who-content",whoGroups,"who");
+function renderTruth(){
+ const el=$("#truth-content");let mode="truth",used={truth:new Set(),dare:new Set()};
+ function home(){el.innerHTML=`<h2>Escolhe a modalidade</h2><div class="choice-row"><button class="primary" data-mode="truth">Verdade</button><button class="secondary" data-mode="dare">Consequência</button></div><p class="note">Podes passar a vez. Ninguém é obrigado a responder ou a realizar um desafio. Respeitem os limites de todos.</p>`;}
+ function draw(){const list=truth[mode],available=list.map((_,i)=>i).filter(i=>!used[mode].has(i));if(!available.length){el.innerHTML=`<h2>Chegaram ao fim!</h2><p>Já foram usadas todas as propostas desta modalidade.</p><button class="secondary" data-reset="${mode}">Recomeçar modalidade</button><button class="quiet" data-action="home">Modalidades</button>`;return;}const n=available[Math.floor(Math.random()*available.length)];used[mode].add(n);const item=list[n];el.innerHTML=`<p class="eyebrow">${mode==="truth"?"Verdade":"Consequência"} · ${esc(item[0])}</p><h2>${esc(item[1])}</h2><p class="reference">Inspiração: ${esc(item[2])}</p>${actionButtons("Passar a vez / Nova proposta")}`;}
+ el.addEventListener("click",e=>{const m=e.target.closest("[data-mode]");if(m){mode=m.dataset.mode;draw();}if(e.target.closest("[data-action=skip]"))draw();if(e.target.closest("[data-action=home]"))home();const r=e.target.closest("[data-reset]");if(r){used[r.dataset.reset].clear();mode=r.dataset.reset;draw();}});home();
+}
+renderTruth();
+function renderBottle(){
+ const el=$("#bottle-content");let used=new Set(),busy=false;
+ const colours={"Vermelho":"#b94c45","Amarelo":"#d6ad55","Verde":"#43866a","Azul":"#477ca5","Roxo":"#84649b","Laranja":"#d88745"};
+ function home(){el.innerHTML=`<p>Escolhe se vais jogar individualmente ou em grupo.</p><div class="choice-row"><button class="primary" data-spin="solo">Individual</button><button class="secondary" data-spin="group">Em grupo</button></div><p class="note">As propostas são sorteadas sem repetição imediata. No modo de grupo, partilhem a vez e respeitem quem preferir passar.</p>`;}
+ function draw(){const remaining=bottle.map((_,i)=>i).filter(i=>!used.has(i));if(!remaining.length){el.innerHTML=`<h2>Descobriram todas as propostas!</h2><button class="secondary" data-reset>Jogar novamente</button>`;return;}const index=remaining[Math.floor(Math.random()*remaining.length)];used.add(index);const item=bottle[index];el.innerHTML=`<div class="colour-disc" style="--disc:${colours[item.colour]}">${esc(item.colour)}</div><p class="eyebrow">${esc(item.category)}</p><h2>${esc(item.prompt)}</h2><p class="reference">${esc(item.reference)}</p>${item.category==="Desafia a tua mente"?'<p class="note">Quando todos tiverem respondido, revela a resposta.</p><button class="secondary" data-reveal>Revelar resposta</button><div id="bottle-answer"></div>':""}<div class="actions"><button class="secondary" data-next>Girar novamente</button><button class="quiet" data-action="home">Voltar</button></div>`;}
+ el.addEventListener("click",e=>{if(e.target.closest("[data-spin]"))draw();if(e.target.closest("[data-next]"))draw();if(e.target.closest("[data-reset]")){used.clear();home();}if(e.target.closest("[data-action=home]"))home();if(e.target.closest("[data-reveal]"))$("#bottle-answer").innerHTML='<p class="feedback">Consulta a explicação com o grupo. Para perguntas bíblicas, confirma a resposta na Bíblia.</p>';});home();
+}
+renderBottle();
+function renderWhatIf(){const el=$("#whatif-content");let used=new Set();function draw(){const remaining=whatif.map((_,i)=>i).filter(i=>!used.has(i));if(!remaining.length){el.innerHTML='<h2>As 15 situações foram exploradas.</h2><button class="secondary" data-reset>Recomeçar</button>';return;}const n=remaining[Math.floor(Math.random()*remaining.length)];used.add(n);const q=whatif[n];el.innerHTML=`<p class="eyebrow">${esc(q[0])} · ${used.size}/15</p><h2>${esc(q[1])}</h2><p class="reference">Para iluminar a reflexão: ${esc(q[2])}</p><p>O que farias? Que consequências poderia ter a tua escolha para ti e para os outros?</p><div class="actions"><button class="secondary" data-next>Outra situação</button><button class="quiet" data-action="home">Voltar ao início</button></div>`;}el.addEventListener("click",e=>{if(e.target.closest("[data-next]"))draw();if(e.target.closest("[data-reset]")){used.clear();draw();}if(e.target.closest("[data-action=home]"))showScreen("home-screen");});draw();}
+renderWhatIf();
+function renderWord(){const el=$("#word-content");let index=0;function draw(){const w=word[index];el.innerHTML=`<div class="word-tabs">${word.map((x,i)=>`<button class="${i===index?"active":""}" data-word="${i}">${esc(x[0])}</button>`).join("")}</div><p class="eyebrow">Palavra · ${esc(w[1])}</p><blockquote class="scripture">Lê esta passagem na tua Bíblia: ${esc(w[1])}</blockquote><h2>Compreender</h2><p>${esc(w[2])}</p><h2>Levar para a vida</h2><p>${esc(w[3])}</p><h2>Responder</h2><p class="prayer">${esc(w[4])}</p>`;}el.addEventListener("click",e=>{const b=e.target.closest("[data-word]");if(b){index=Number(b.dataset.word);draw();}});draw();}
+renderWord();
+if("serviceWorker"in navigator&&location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(err=>console.warn("Service worker não registado:",err)));
