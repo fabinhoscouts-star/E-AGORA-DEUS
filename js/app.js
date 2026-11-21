@@ -86,3 +86,6 @@ function renderSeminaristQuestions(){
 renderSeminaristQuestions();
 
 if("serviceWorker"in navigator&&location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(err=>console.warn("Service worker não registado:",err)));
+
+// Carrega a experiência interactiva melhorada depois da inicialização base.
+import("./games-enhanced.js").catch(error=>console.error("Não foi possível carregar os jogos melhorados:",error));
