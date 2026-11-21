@@ -3,7 +3,7 @@ const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const screens=$$(".screen"),navItems=$$(".nav-item");
-function showScreen(id){screens.forEach(s=>s.classList.toggle("active",s.id===id));navItems.forEach(n=>n.classList.toggle("active",n.dataset.open===id));window.scrollTo({top:0,behavior:"smooth"});}
+function showScreen(id){screens.forEach(s=>s.classList.toggle("active",s.id===id));const navTarget=["vocation-screen","who-screen","truth-screen","bottle-screen","whatif-screen"].includes(id)?"games-screen":id;navItems.forEach(n=>n.classList.toggle("active",n.dataset.open===navTarget));window.scrollTo({top:0,behavior:"smooth"});}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-open]");if(b)showScreen(b.dataset.open);});
 $("#brand-home").addEventListener("click",()=>showScreen("home-screen"));
 function panel(id,html){const el=document.getElementById(id);if(el)el.innerHTML=html;}
