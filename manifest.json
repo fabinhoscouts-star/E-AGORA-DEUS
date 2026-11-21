@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "E AGORA, DEUS? — Seminário São José",
+  "short_name": "E AGORA, DEUS?",
+  "description": "Uma aplicação de evangelização, reflexão e discernimento vocacional do Seminário São José.",
+  "lang": "pt-PT",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8f7f1",
+  "theme_color": "#174c3c",
+  "categories": ["education", "lifestyle"],
+  "icons": [{"src":"./assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
