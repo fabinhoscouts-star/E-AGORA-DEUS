@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174c3c">
+  <meta name="description" content="Uma aplicação de evangelização, reflexão e discernimento vocacional do Seminário São José.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>E AGORA, DEUS? — Seminário São José</title>
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" id="brand-home" aria-label="Voltar ao início"><span class="brand-mark">✝</span><span>E AGORA, DEUS?</span></button>
+    <span class="institution">Seminário São José</span>
+  </header>
+  <main id="app" tabindex="-1">
+    <section class="screen active" id="home-screen">
+      <div class="hero">
+        <p class="eyebrow">Seminário São José</p>
+        <h1>E agora, Deus?</h1>
+        <p>Um espaço para descobrires, reflectires, rezares e escutares o caminho que Deus te convida a percorrer.</p>
+        <button class="primary" data-open="vocation-screen">Descobre a tua vocação <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="section-heading"><p class="eyebrow">Explora</p><h2>Um caminho de descoberta</h2></div>
+      <div class="home-grid">
+        <button class="tile" data-open="who-screen"><span>♡</span><strong>Quem sou eu?</strong><small>Conhece os teus dons, valores e fragilidades.</small></button>
+        <button class="tile" data-open="truth-screen"><span>✦</span><strong>Verdade ou Consequência</strong><small>Partilha, diverte-te e cresce em grupo.</small></button>
+        <button class="tile" data-open="bottle-screen"><span>◉</span><strong>Gira a Garrafa!</strong><small>Uma surpresa para cada participante.</small></button>
+        <button class="tile" data-open="whatif-screen"><span>?</span><strong>E se fosse contigo?</strong><small>Reflecte sobre situações da vida.</small></button>
+        <button class="tile" data-open="word-screen"><span>✝</span><strong>Palavra de Deus</strong><small>Encontra luz para o teu caminho.</small></button>
+        <button class="tile" data-open="seminary-screen"><span>⌂</span><strong>Conhece o Seminário</strong><small>Descobre a vida e a formação no Seminário.</small></button>
+        <button class="tile" data-open="voice-screen"><span>✉</span><strong>A tua voz, em confiança</strong><small>Um espaço de escuta e acompanhamento.</small></button>
+        <button class="tile" data-open="privacy-screen"><span>◇</span><strong>Privacidade</strong><small>Como cuidamos da tua informação.</small></button>
+      </div>
+    </section>
+    <section class="screen" id="vocation-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Jogo de descoberta</p><h1>Descobre a tua vocação</h1><p class="intro">A tua vocação é um caminho, não uma resposta automática. Escolhe uma categoria e começa a reflectir.</p><div id="vocation-content" class="content-panel"></div></section>
+    <section class="screen" id="who-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Autoconhecimento</p><h1>Quem sou eu?</h1><p class="intro">Conhecer-te é também aprender a crescer.</p><div id="who-content" class="content-panel"></div></section>
+    <section class="screen" id="truth-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Jogo em grupo</p><h1>Verdade ou Consequência</h1><p class="intro">Respeita cada pessoa. Ninguém é obrigado a responder ou a realizar um desafio.</p><div id="truth-content" class="content-panel"></div></section>
+    <section class="screen" id="bottle-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Jogo em grupo</p><h1>Gira a Garrafa!</h1><p class="intro">Uma cor, uma proposta e uma oportunidade de descobrir algo novo.</p><div id="bottle-content" class="content-panel"></div></section>
+    <section class="screen" id="whatif-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Reflexão</p><h1>E se fosse contigo?</h1><p class="intro">Pensa nas tuas escolhas e nas consequências que podem ter para os outros.</p><div id="whatif-content" class="content-panel"></div></section>
+    <section class="screen" id="word-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e oração</p><h1>Palavra de Deus</h1><div id="word-content" class="content-panel"></div></section>
+    <section class="screen" id="seminary-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Seminário São José</p><h1>Conhece o Seminário</h1><div class="content-panel"><h2>Formar homens, discípulos e sacerdotes</h2><p>A formação no Seminário desenvolve-se em quatro dimensões que caminham lado a lado: espiritual, humana, intelectual e pastoral.</p><h3>Uma vida em comunidade</h3><p>Rezar, estudar, partilhar refeições, participar na pastoral, trabalhar e conviver fazem parte do caminho formativo.</p><h3>Jovem, achas que Deus te chama a ser padre?</h3><p>Procura conhecer melhor esta vocação e conversa com alguém que te possa acompanhar.</p><p class="note">Conteúdo institucional a completar e validar com os materiais oficiais do Seminário.</p></div></section>
+    <section class="screen" id="voice-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e acompanhamento</p><h1>A tua voz, em confiança</h1><div class="content-panel"><p>Este espaço está a ser preparado para receber mensagens com segurança.</p><div class="notice">O envio de mensagens ainda não está activo. Não introduzas aqui informações pessoais ou situações urgentes.</div><p>Este canal não é um serviço de emergência e não pode garantir confidencialidade absoluta em situações de risco grave.</p></div></section>
+    <section class="screen" id="privacy-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Transparência</p><h1>Privacidade</h1><div class="content-panel"><p>A protecção dos teus dados é importante. A política de privacidade final deverá identificar a entidade responsável, os contactos, as finalidades, os prazos de conservação e os teus direitos.</p><div class="notice">A recolha de mensagens ainda não está activa. Este texto é informativo e não substitui a política institucional validada.</div></div></section>
+  </main>
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <button class="nav-item active" data-open="home-screen">Início</button>
+    <button class="nav-item" data-open="vocation-screen">Jogos</button>
+    <button class="nav-item" data-open="word-screen">Palavra</button>
+    <button class="nav-item" data-open="seminary-screen">Seminário</button>
+    <button class="nav-item" data-open="voice-screen">Perguntas</button>
+  </nav>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
