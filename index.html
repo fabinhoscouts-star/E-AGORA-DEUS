@@ -4,51 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#174c3c">
-  <meta name="description" content="Uma aplicação de evangelização, reflexão e discernimento vocacional do Seminário São José.">
+  <meta name="description" content="E AGORA, DEUS? — um espaço de descoberta, reflexão, oração e discernimento do Seminário São José de Cabo Verde.">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./css/styles.css">
-  <title>E AGORA, DEUS? — Seminário São José</title>
+  <title>E AGORA, DEUS? — Seminário São José Cabo Verde</title>
 </head>
 <body>
   <header class="topbar">
-    <button class="brand" id="brand-home" aria-label="Voltar ao início"><span class="brand-mark">✝</span><span>E AGORA, DEUS?</span></button>
-    <span class="institution">Seminário São José</span>
+    <button class="brand" id="brand-home" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true">✝</span><span>Seminário São José Cabo Verde</span></button>
+    <button class="settings-button" data-open="settings-screen" aria-label="Definições" title="Definições">⚙</button>
   </header>
   <main id="app" tabindex="-1">
     <section class="screen active" id="home-screen">
-      <div class="hero">
-        <p class="eyebrow">Seminário São José</p>
-        <h1>E agora, Deus?</h1>
-        <p>Um espaço para descobrires, reflectires, rezares e escutares o caminho que Deus te convida a percorrer.</p>
+      <div class="hero hero-showcase">
+        <div class="hero-copy">
+          <p class="eyebrow">Seminário São José Cabo Verde</p>
+          <h1>E AGORA,<br><em>DEUS?</em></h1>
+          <p class="hero-tagline">Descobre, escuta, discerne, responde.</p>
+          <p>Um espaço para descobrires, reflectires, rezares e escutares o caminho que Deus te convida a percorrer.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><span class="hero-sun"></span><span class="hero-cross">✝</span><span class="hero-horizon"></span><span class="hero-book">▱</span></div>
       </div>
-      <div class="section-heading"><p class="eyebrow">Explora</p><h2>Um caminho de descoberta</h2></div>
-      <div class="home-grid home-grid-main">
-        <button class="tile" data-open="word-screen"><span>✝</span><strong>Palavra de Deus</strong><small>Encontra luz para o teu caminho.</small></button>
-        <button class="tile" data-open="seminary-screen"><span>⌂</span><strong>Conhece o Seminário</strong><small>Descobre a vida e a formação no Seminário.</small></button>
-        <button class="tile" data-open="voice-screen"><span>✉</span><strong>A tua voz, em confiança</strong><small>Um espaço de escuta e acompanhamento.</small></button>
+      <div class="section-heading home-section-heading"><p class="eyebrow">O teu caminho começa aqui</p><h2>Escolhe por onde queres começar</h2></div>
+      <button class="tile vocation-tile" data-open="vocation-screen"><span class="tile-icon">⌖</span><span class="tile-copy"><strong>Descobre a tua vocação</strong><small>Reflecte, escolhe, descobre… Qual é o teu caminho?</small></span><span class="tile-arrow">›</span></button>
+      <div class="home-grid games-grid">
+        <button class="tile" data-open="who-screen"><span class="tile-icon">♧</span><strong>Quem sou eu?</strong><small>Conhece os teus dons, valores e fragilidades.</small></button>
+        <button class="tile" data-open="truth-screen"><span class="tile-icon">✓</span><strong>Verdade ou Consequência</strong><small>Escolhe, partilha e diverte-te em grupo.</small></button>
+        <button class="tile" data-open="bottle-screen"><span class="tile-icon">◉</span><strong>Gira a Garrafa!</strong><small>Surpreende-te com cada proposta.</small></button>
+        <button class="tile" data-open="whatif-screen"><span class="tile-icon">?</span><strong>E se fosse contigo?</strong><small>Coloca-te no lugar do outro.</small></button>
+      </div>
+      <div class="home-shortcuts">
+        <button data-open="word-screen"><span>✝</span> Palavra de Deus <b>›</b></button>
+        <button data-open="seminary-screen"><span>⌂</span> Conhece o Seminário <b>›</b></button>
+        <button data-open="questions-screen"><span>◌</span> Pergunta aos Seminaristas <b>›</b></button>
       </div>
     </section>
-    <section class="screen" id="vocation-screen"><button class="back" data-open="voice-screen">← A tua voz, em confiança</button><p class="eyebrow">Jogo de descoberta</p><h1>Descobre a tua vocação</h1><p class="intro">A tua vocação é um caminho, não uma resposta automática. Escolhe uma categoria e começa a reflectir.</p><div id="vocation-content" class="content-panel"></div></section>
+
+    <section class="screen" id="vocation-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Jogo de descoberta</p><h1>Descobre a tua vocação</h1><p class="intro">A tua vocação é um caminho, não uma resposta automática. Escolhe uma categoria e começa a reflectir.</p><div id="vocation-content" class="content-panel"></div></section>
     <section class="screen" id="who-screen"><button class="back" data-open="games-screen">← Jogos</button><p class="eyebrow">Autoconhecimento</p><h1>Quem sou eu?</h1><p class="intro">Conhecer-te é também aprender a crescer.</p><div id="who-content" class="content-panel"></div></section>
     <section class="screen" id="truth-screen"><button class="back" data-open="games-screen">← Jogos</button><p class="eyebrow">Jogo em grupo</p><h1>Verdade ou Consequência</h1><p class="intro">Respeita cada pessoa. Ninguém é obrigado a responder ou a realizar um desafio.</p><div id="truth-content" class="content-panel"></div></section>
     <section class="screen" id="bottle-screen"><button class="back" data-open="games-screen">← Jogos</button><p class="eyebrow">Jogo em grupo</p><h1>Gira a Garrafa!</h1><p class="intro">Uma cor, uma proposta e uma oportunidade de descobrir algo novo.</p><div id="bottle-content" class="content-panel"></div></section>
     <section class="screen" id="whatif-screen"><button class="back" data-open="games-screen">← Jogos</button><p class="eyebrow">Reflexão</p><h1>E se fosse contigo?</h1><p class="intro">Pensa nas tuas escolhas e nas consequências que podem ter para os outros.</p><div id="whatif-content" class="content-panel"></div></section>
-    <section class="screen" id="word-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e oração</p><h1>Palavra de Deus</h1><div id="word-content" class="content-panel"></div></section>
-    <section class="screen" id="seminary-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Seminário São José</p><h1>Conhece o Seminário</h1><div class="content-panel"><h2>Formar homens, discípulos e sacerdotes</h2><p>A formação no Seminário desenvolve-se em quatro dimensões que caminham lado a lado: espiritual, humana, intelectual e pastoral.</p><h3>Uma vida em comunidade</h3><p>Rezar, estudar, partilhar refeições, participar na pastoral, trabalhar e conviver fazem parte do caminho formativo.</p><h3>Jovem, achas que Deus te chama a ser padre?</h3><p>Procura conhecer melhor esta vocação e conversa com alguém que te possa acompanhar.</p><div class="link-actions"><a class="secondary-link" href="https://share.google/OAXVew2J3jZBSjCwx" target="_blank" rel="noopener noreferrer">Visitar a página do Seminário ↗</a><a class="secondary-link" href="https://www.facebook.com/p/Semin%C3%A1rio-Diocesano-de-S-Jos%C3%A9-Praia-CV-100064686595926/" target="_blank" rel="noopener noreferrer">Facebook oficial ↗</a></div><p class="note">Os links acima encaminham para os canais indicados pelo Seminário.</p></div></section>
-    <section class="screen" id="voice-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e acompanhamento</p><h1>A tua voz, em confiança</h1><div class="content-panel"><p>Um espaço para escutar, esclarecer dúvidas e acompanhar quem procura compreender melhor o seu caminho.</p><h2>Descobre a tua vocação</h2><p>Começa por reflectir sobre os teus dons, as tuas perguntas e o caminho que desejas construir.</p><button class="primary" data-open="vocation-screen">Começar a descobrir a minha vocação →</button><h2>Pergunta aos Seminaristas</h2><p>Encontra respostas às dúvidas mais frequentes ou prepara uma pergunta para a equipa do Seminário.</p><button class="secondary" data-open="questions-screen">Consultar perguntas e respostas</button><div class="notice" style="margin-top:18px">O envio de mensagens ainda não está activo. As perguntas preparadas nesta versão não são enviadas nem guardadas.</div><p>Este canal não é um serviço de emergência e não pode garantir confidencialidade absoluta em situações de risco grave.</p></div></section>
-    <section class="screen" id="questions-screen"><button class="back" data-open="voice-screen">← A tua voz, em confiança</button><p class="eyebrow">Diálogo e esclarecimento</p><h1>Pergunta aos Seminaristas</h1><p class="intro">Tens dúvidas sobre a vocação, a vida no Seminário ou o sacerdócio? Começa por explorar as perguntas frequentes.</p><div id="questions-content" class="content-panel"></div></section>
-    <section class="screen" id="games-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Participar e descobrir</p><h1>Jogos</h1><p class="intro">Quatro propostas para te conheceres melhor, partilhares e reflectires com os outros.</p><div class="home-grid games-grid"><button class="tile" data-open="who-screen"><span>♡</span><strong>Quem sou eu?</strong><small>Conhece os teus dons, valores e fragilidades.</small></button><button class="tile" data-open="truth-screen"><span>✦</span><strong>Verdade ou Consequência</strong><small>Partilha, diverte-te e cresce em grupo.</small></button><button class="tile" data-open="bottle-screen"><span>◉</span><strong>Gira a Garrafa!</strong><small>Uma surpresa para cada participante.</small></button><button class="tile" data-open="whatif-screen"><span>?</span><strong>E se fosse contigo?</strong><small>Reflecte sobre situações da vida.</small></button></div></section>
+
+    <section class="screen" id="games-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Participar e descobrir</p><h1>Jogos e dinâmicas</h1><p class="intro">Cinco propostas para te conheceres melhor, partilhares e reflectires com os outros.</p><button class="tile vocation-tile" data-open="vocation-screen"><span class="tile-icon">⌖</span><span class="tile-copy"><strong>Descobre a tua vocação</strong><small>Reflecte, escolhe, descobre…</small></span><span class="tile-arrow">›</span></button><div class="home-grid games-grid"><button class="tile" data-open="who-screen"><span class="tile-icon">♧</span><strong>Quem sou eu?</strong><small>Conhece os teus dons, valores e fragilidades.</small></button><button class="tile" data-open="truth-screen"><span class="tile-icon">✓</span><strong>Verdade ou Consequência</strong><small>Partilha, diverte-te e cresce em grupo.</small></button><button class="tile" data-open="bottle-screen"><span class="tile-icon">◉</span><strong>Gira a Garrafa!</strong><small>Uma surpresa para cada participante.</small></button><button class="tile" data-open="whatif-screen"><span class="tile-icon">?</span><strong>E se fosse contigo?</strong><small>Reflecte sobre situações da vida.</small></button></div></section>
+
+    <section class="screen" id="word-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e oração</p><h1>Palavra de Deus</h1><div class="word-intro-card"><span aria-hidden="true">▤</span><p>«Entrega o teu caminho ao Senhor, confia n'Ele, e Ele tudo fará.»</p><small>Salmo 37,5</small></div><div id="word-content" class="content-panel"></div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
+
+    <section class="screen" id="seminary-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Seminário São José Cabo Verde</p><h1>Conhece o Seminário</h1><div class="seminary-banner"><span>Formar, servir, caminhar juntos.</span></div><div class="content-panel"><h2>Formar homens, discípulos e sacerdotes</h2><p>A formação no Seminário desenvolve-se em quatro dimensões que caminham lado a lado. Cada uma contribui para o crescimento integral da pessoa e para a preparação ao serviço da Igreja.</p><h2>As 4 dimensões da formação</h2><div class="dimension-grid"><article class="dimension-card spiritual"><span>✝</span><strong>Espiritual</strong><small>Amizade com Cristo e vida de oração.</small></article><article class="dimension-card human"><span>♧</span><strong>Humana</strong><small>Maturidade, liberdade e relações.</small></article><article class="dimension-card intellectual"><span>▤</span><strong>Intelectual</strong><small>Estudo, reflexão e procura da verdade.</small></article><article class="dimension-card pastoral"><span>♡</span><strong>Pastoral</strong><small>Serviço e proximidade com o povo de Deus.</small></article></div><h2>Uma vida em comunidade</h2><p>Rezar, estudar, partilhar refeições, participar na pastoral, trabalhar e conviver fazem parte do caminho formativo. A rotina organiza o dia, mas também deixa espaço para a amizade, o descanso e o crescimento pessoal.</p><h3>Jovem, achas que Deus te chama a ser padre?</h3><p>Procura conhecer melhor esta vocação e conversa com alguém que te possa acompanhar.</p><div class="link-actions"><a class="secondary-link" href="https://share.google/OAXVew2J3jZBSjCwx" target="_blank" rel="noopener noreferrer">Visitar a página do Seminário ↗</a><a class="secondary-link" href="https://www.facebook.com/p/Semin%C3%A1rio-Diocesano-de-S-Jos%C3%A9-Praia-CV-100064686595926/" target="_blank" rel="noopener noreferrer">Facebook oficial ↗</a></div><p class="note">Os links acima encaminham para os canais indicados pelo Seminário.</p></div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
+
+    <section class="screen" id="questions-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e acompanhamento</p><h1>Pergunta aos Seminaristas</h1><div class="voice-intro"><div class="voice-symbol" aria-hidden="true">♫</div><div><h2>A tua voz, em confiança</h2><p>Um espaço para escutar, esclarecer dúvidas e acompanhar quem procura compreender melhor o seu caminho.</p></div></div><div id="questions-content" class="content-panel"></div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
+
     <section class="screen" id="settings-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Aplicação</p><h1>Definições</h1><div class="content-panel"><h2>Privacidade e informação</h2><p>Consulta a informação sobre a forma como os dados são tratados nesta aplicação.</p><button class="secondary" data-open="privacy-screen">Política de Privacidade →</button></div></section>
-    <section class="screen" id="privacy-screen"><button class="back" data-open="settings-screen">← Definições</button><p class="eyebrow">Definições · Privacidade</p><h1>Política de Privacidade</h1><div class="content-panel"><p>A protecção dos teus dados é importante. A política de privacidade apresenta a entidade responsável, os contactos, as finalidades, os prazos de conservação e os teus direitos.</p><div class="notice">A recolha de mensagens ainda não está activa. A versão final da política institucional deverá ser apresentada integralmente nesta área.</div></div></section>
+    <section class="screen" id="privacy-screen"><button class="back" data-open="settings-screen">← Definições</button><p class="eyebrow">Definições · Privacidade</p><h1>Política de Privacidade</h1><div class="privacy-lock"><span aria-hidden="true">▣</span><p>A tua privacidade é importante para nós.</p></div><div class="content-panel privacy-list">
+      <details><summary>O que recolhemos?</summary><p>Nesta versão, a aplicação não envia nem guarda as perguntas que escreves. As reflexões dos jogos permanecem apenas na página enquanto a utilizas.</p></details>
+      <details><summary>Como usamos os dados?</summary><p>As funcionalidades de envio de mensagens ainda não estão activas. Por isso, não existe nesta versão um tratamento de mensagens submetidas através da aplicação.</p></details>
+      <details><summary>A tua privacidade</summary><p>Evita escrever dados pessoais sensíveis nos campos de reflexão ou nos rascunhos. Não uses este espaço para comunicar situações urgentes.</p></details>
+      <details><summary>Os teus direitos</summary><p>Quando o canal de mensagens for activado, esta secção deverá identificar claramente a entidade responsável, os direitos aplicáveis e a forma de os exercer.</p></details>
+      <details><summary>Contactos</summary><p>Para informação institucional, consulta os canais oficiais do Seminário São José indicados na secção «Conhece o Seminário».</p></details>
+    </div><div class="notice">Esta é uma apresentação informativa provisória. A política institucional completa deverá ser validada e publicada pelo Seminário antes de activar qualquer recolha de dados.</div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
   </main>
   <nav class="bottom-nav" aria-label="Navegação principal">
-    <button class="nav-item active" data-open="home-screen">Início</button>
-    <button class="nav-item" data-open="games-screen">Jogos</button>
-    <button class="nav-item" data-open="word-screen">Palavra</button>
-    <button class="nav-item" data-open="seminary-screen">Seminário</button>
-    <button class="nav-item" data-open="voice-screen">A tua voz</button>
-    <button class="nav-item settings-nav" data-open="settings-screen" aria-label="Definições" title="Definições">⚙</button>
+    <button class="nav-item active" data-open="home-screen"><span>⌂</span>Início</button>
+    <button class="nav-item" data-open="games-screen"><span>✧</span>Jogos</button>
+    <button class="nav-item" data-open="word-screen"><span>✝</span>Palavra</button>
+    <button class="nav-item" data-open="seminary-screen"><span>▤</span>Seminário</button>
+    <button class="nav-item" data-open="questions-screen"><span>◌</span>Perguntas</button>
   </nav>
   <script type="module" src="./js/app.js"></script>
 </body>
