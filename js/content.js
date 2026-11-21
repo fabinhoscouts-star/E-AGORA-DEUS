@@ -117,13 +117,13 @@ export const truth = {
 };
 export const bottle = [
  ...[
- ["Vermelho","Coração aberto","Conta uma lembrança que te faz sorrir.","1 Coríntios 13,4-7"],
- ["Amarelo","Desafia a tua mente","Quantos são os Evangelhos?","A resposta é quatro.",""],
- ["Verde","Atitude em acção","Que gesto de solidariedade podes fazer esta semana?","Tiago 2,17"],
- ["Azul","Encontro com a Palavra","Que ensinamento de Jesus gostarias de viver melhor?","Romanos 15,4"],
- ["Roxo","Conhece o outro","Faz uma pergunta respeitosa a alguém do grupo.","Romanos 12,10"],
- ["Laranja","Surpresa!","Inventa uma frase de incentivo para o grupo.","1 Timóteo 4,12"]
- ].flatMap(([colour,category,prompt,extra,reference])=>Array.from({length:5},(_,i)=>({colour,category,prompt:i===0?prompt:[["O que te faz sentir acolhido?","Que pessoa te inspira a ser melhor?","Partilha algo pelo qual estás grato.","O que valorizas numa amizade?"][i%4],["Quem construiu a arca?","Em que livro encontramos o Apocalipse?","Quem recebeu os Dez Mandamentos?","Em que ocasião Jesus transformou água em vinho?"][i%4],["Como podes ajudar alguém sem esperar recompensa?","Que necessidade da tua comunidade podes atender?","Que pequeno serviço podes oferecer hoje?","Como podes defender alguém que é excluído?"][i%4],["Que passagem bíblica te dá esperança?","O que significa servir como Jesus?","Que palavra gostarias de guardar no coração?","Como encontras silêncio para rezar?"][i%4],["Que qualidade admiras numa pessoa do grupo?","Como podes escutar melhor os outros?","O que ajuda a resolver um conflito?","Como acolhes alguém diferente de ti?"][i%4],["Cria um gesto de paz para o grupo.","Diz uma frase que anime alguém.","Inventa um símbolo de esperança.","Propõe um desafio saudável para todos."][i%4]],reference:extra})) 
+  ["Vermelho","Coração aberto",["Conta uma lembrança que te faz sorrir.","Que pessoa te inspira a ser melhor?","O que valorizas numa amizade?","Partilha algo pelo qual estás grato.","O que te faz sentir acolhido?"],"1 Coríntios 13,4-7"],
+  ["Amarelo","Desafia a tua mente",["Quantos são os Evangelhos?","Quem construiu a arca?","Quem recebeu os Dez Mandamentos?","Em que ocasião Jesus transformou água em vinho?","Em que livro bíblico encontramos o Apocalipse?"],"Bíblia"],
+  ["Verde","Atitude em acção",["Que gesto de solidariedade podes fazer esta semana?","Como podes ajudar alguém sem esperar recompensa?","Que necessidade da tua comunidade podes atender?","Como podes defender alguém que é excluído?","Que pequeno serviço podes oferecer hoje?"],"Tiago 2,17"],
+  ["Azul","Encontro com a Palavra",["Que passagem bíblica te dá esperança?","O que significa servir como Jesus?","Que palavra gostarias de guardar no coração?","Como encontras silêncio para rezar?","Que ensinamento de Jesus gostarias de viver melhor?"],"Romanos 15,4"],
+  ["Roxo","Conhece o outro",["Faz uma pergunta respeitosa a alguém do grupo.","Que qualidade admiras numa pessoa do grupo?","Como podes escutar melhor os outros?","O que ajuda a resolver um conflito?","Como acolhes alguém diferente de ti?"],"Romanos 12,10"],
+  ["Laranja","Surpresa!",["Inventa uma frase de incentivo para o grupo.","Cria um gesto de paz para o grupo.","Diz uma frase que anime alguém.","Inventa um símbolo de esperança.","Propõe um desafio saudável para todos."],"1 Timóteo 4,12"]
+ ].flatMap(([colour,category,prompts,reference])=>prompts.map((prompt,i)=>({colour,category,prompt,reference,answer:colour==="Amarelo"?["Quatro.","Noé.","Moisés.","Nas bodas de Caná (João 2,1-11).","No Apocalipse."][i]:null})))
 ];
 export const whatif = [
  ["Família","Em casa começa uma discussão e todos falam ao mesmo tempo. Como podes contribuir para acalmar a situação?","Efésios 4,26-27"],
