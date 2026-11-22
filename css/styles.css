@@ -137,3 +137,10 @@ main{padding-top:24px}
 .saved-verses{margin-top:24px;padding:16px;border-top:2px solid var(--gold);background:#fffdf8;border-radius:12px}
 .saved-verses h3{margin-top:0;color:var(--green)}.saved-verses p{padding:9px 0;border-bottom:1px solid var(--line);font-size:.88rem}
 @media(max-width:520px){.score-strip{align-items:flex-start}.wheel-label{font-size:.67rem}.label-0{transform:rotate(30deg) translate(65px,-8px)}.label-1{transform:rotate(90deg) translate(65px,-8px)}.label-2{transform:rotate(150deg) translate(65px,-8px)}.label-3{transform:rotate(210deg) translate(65px,-8px)}.label-4{transform:rotate(270deg) translate(65px,-8px)}.label-5{transform:rotate(330deg) translate(65px,-8px)}}
+
+/* Orientações dos jogos e informação institucional */
+.game-guide{margin:12px 0 18px;padding:13px 15px;border-left:3px solid var(--gold);background:#f8f5eb;border-radius:9px;color:#465348;font-size:.9rem;line-height:1.55}
+.game-guide strong{color:var(--green)}
+.seminary-points{padding-left:1.25rem;margin:12px 0 22px}
+.seminary-points li{margin:0 0 10px;line-height:1.55;color:var(--text)}
+.seminary-points strong{color:var(--green)}
