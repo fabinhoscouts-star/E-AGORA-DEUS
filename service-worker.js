@@ -1,4 +1,4 @@
-const CACHE="e-agora-deus-shell-v13";
+const CACHE="e-agora-deus-shell-v14";
 const FILES=["./","./index.html","./manifest.json","./css/styles.css","./js/app.js","./js/content.js","./js/games-enhanced.js","./assets/icons/icon.svg", "./assets/illustrations/prayer.svg", "./assets/illustrations/human.svg", "./assets/illustrations/study.svg", "./assets/illustrations/pastoral.svg", "./assets/illustrations/community.svg", "./assets/illustrations/vocation.svg", "./assets/illustrations/bible.svg"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
