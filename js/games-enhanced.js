@@ -57,9 +57,40 @@ function renderBottle(){
 renderBottle();
 function renderWhatIf(){
  const el=freshPanel("whatif-content"),state={score:0,earned:new Set()},used=new Set();let current=null;
- function draw(){if(used.size===whatif.length){finish();return;}const available=whatif.map((_,i)=>i).filter(i=>!used.has(i));const n=available[Math.floor(Math.random()*available.length)];used.add(n);current="whatif-"+n;const q=whatif[n];el.innerHTML='<p class="eyebrow">'+esc(q[0])+' · '+used.size+'/'+whatif.length+'</p><div class="score-strip"><strong>'+state.score+' pontos</strong><span>Situações exploradas</span></div><h2>'+esc(q[1])+'</h2><p>Imagina que estás mesmo nesta situação. O que farias? Porquê? Quem seria afectado pela tua decisão?</p>'+responseBox("Escreve como reagirias e explica porquê...","Considera os valores envolvidos, as consequências para todas as pessoas e uma resposta que una verdade, justiça e respeito.",q[2])+'<div class="actions"><button class="secondary" data-next>Próxima situação</button><button class="quiet" data-open="games-screen">Voltar aos jogos</button><button class="quiet" data-finish>Terminar e receber a Palavra</button></div>';}
+ function draw(){
+  if(used.size===whatif.length){finish();return;}
+  const available=whatif.map((_,i)=>i).filter(i=>!used.has(i));
+  const n=available[Math.floor(Math.random()*available.length)];
+  used.add(n);current="whatif-"+n;
+  const q=whatif[n];
+  el.innerHTML='<p class="eyebrow">'+esc(q.category)+' · '+used.size+'/'+whatif.length+'</p><div class="score-strip"><strong>'+state.score+' pontos</strong><span>Situações exploradas</span></div><h2>'+esc(q.prompt)+'</h2><p>Imagina que estás mesmo nesta situação. Escolhe a resposta que consideras mais adequada e pensa nas consequências.</p><div class="answer-list">'+q.choices.map((choice,i)=>'<button class="answer" data-option="'+i+'">'+String.fromCharCode(65+i)+'. '+esc(choice.text)+'</button>').join("")+'</div><div id="whatif-feedback" aria-live="polite"></div><div class="actions"><button class="secondary" data-next disabled>Próxima situação</button><button class="quiet" data-finish>Terminar e receber a Palavra</button></div>';
+ }
  function finish(){el.innerHTML=rewardHTML(state,"E se fosse contigo?");bindSave(el);}
- el.addEventListener("click",e=>{if(e.target.closest("[data-reflect]")){const box=el.querySelector(".reflection-feedback"),input=el.querySelector(".response-input");if(!input.value.trim()){input.focus();return;}if(award(state,current,5)){}reflectionFeedback(box);box.insertAdjacentHTML("beforeend","<p><strong>+5 pontos de participação</strong></p>");e.target.disabled=true;}if(e.target.closest("[data-finish]")){finish();return;}if(e.target.closest("[data-next]"))draw();if(e.target.closest("[data-restart]")){state.score=0;state.earned.clear();used.clear();draw();}});
+ el.addEventListener("click",e=>{
+  const option=e.target.closest("[data-option]");
+  if(option){
+   if(el.querySelector(".answer[disabled]"))return;
+   const index=Number(option.dataset.option),q=whatif[Number(current.split("-")[1])],chosen=q.choices[index];
+   el.querySelectorAll("[data-option]").forEach(b=>b.disabled=true);
+   option.classList.add("selected");
+   const gained=award(state,current+"-choice",5);
+   const feedback=el.querySelector("#whatif-feedback");
+   feedback.innerHTML='<div class="feedback"><strong>O que pode acontecer?</strong><p>'+esc(chosen.consequence)+'</p><p><strong>À luz da Palavra</strong></p><p>'+esc(q.teaching)+'</p><p class="reference">Passagem bíblica: '+esc(q.reference)+'</p><p class="reflection-question">'+esc(q.reflection)+'</p><p><strong>'+(gained?"+5 pontos de participação":"Escolha já pontuada nesta sessão.")+'</strong></p></div>'+responseBox("Escreve como reagirias e explica porquê...","Considera os valores envolvidos, as consequências para todas as pessoas e uma resposta que una verdade, justiça e respeito.",q.reference);
+   const next=el.querySelector("[data-next]");if(next)next.disabled=false;
+   return;
+  }
+  if(e.target.closest("[data-reflect]")){
+   const box=el.querySelector(".reflection-feedback"),input=el.querySelector(".response-input");
+   if(!input.value.trim()){input.focus();return;}
+   const gained=award(state,current+"-reflection",5);
+   reflectionFeedback(box);
+   box.insertAdjacentHTML("beforeend",gained?'<p><strong>+5 pontos de participação</strong></p>':'<p>Esta reflexão já foi pontuada nesta sessão.</p>');
+   e.target.disabled=true;return;
+  }
+  if(e.target.closest("[data-finish]")){finish();return;}
+  if(e.target.closest("[data-next]")&&!e.target.closest("[data-next]").disabled){draw();return;}
+  if(e.target.closest("[data-restart]")){state.score=0;state.earned.clear();used.clear();draw();}
+ });
  draw();
 }
 renderWhatIf();
