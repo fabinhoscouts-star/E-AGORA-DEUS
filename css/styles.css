@@ -167,17 +167,3 @@ main{padding-top:24px}
 .word-intro-card img{display:block;width:min(100%,440px);height:145px;object-fit:cover;border-radius:12px;margin:0 auto 12px}
 .seminary-emblem{min-height:0;padding:12px;background:transparent;border-radius:0}
 .seminary-emblem img{display:block;width:min(100%,480px);max-height:260px;object-fit:contain;border-radius:8px;background:#fff}
-
-
-/* Partilha, funcionamento offline e instalação */
-.connection-status{position:sticky;top:0;z-index:8;padding:9px 16px;text-align:center;font-size:.84rem;font-weight:750;background:#e9efe9;color:var(--green);border-bottom:1px solid var(--line)}
-.connection-status.is-offline{background:#fff2d9;color:#72551c}
-.connection-status[hidden]{display:none}
-.share-card{margin-top:18px;padding:clamp(20px,4vw,30px);border:1px solid var(--line);border-radius:18px;background:#fffdf8;text-align:center}
-.share-card h2{margin:4px 0 8px;color:var(--green)}
-.share-card>p:not(.eyebrow){color:var(--muted)}
-.share-qr{display:block;width:min(100%,260px);height:auto;margin:18px auto;padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px;image-rendering:pixelated}
-.share-url{overflow-wrap:anywhere;font-weight:750}
-.share-url a{color:var(--green)}
-.share-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:14px}
-.share-feedback{min-height:1.4em;font-size:.85rem;color:var(--green)}

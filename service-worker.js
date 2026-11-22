@@ -1,14 +1,5 @@
-const CACHE="e-agora-deus-shell-v15";
-const FILES=["./","./index.html","./manifest.json","./css/styles.css","./js/app.js","./js/content.js","./js/games-enhanced.js","./assets/icons/icon.svg","./assets/qr-e-agora-deus.svg","./assets/illustrations/prayer.svg","./assets/illustrations/human.svg","./assets/illustrations/study.svg","./assets/illustrations/pastoral.svg","./assets/illustrations/community.svg","./assets/illustrations/vocation.svg","./assets/illustrations/bible.svg"];
-self.addEventListener("install",event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE);await Promise.allSettled(FILES.map(file=>cache.add(file)));await self.skipWaiting();})());});
+const CACHE="e-agora-deus-shell-v14";
+const FILES=["./","./index.html","./manifest.json","./css/styles.css","./js/app.js","./js/content.js","./js/games-enhanced.js","./assets/icons/icon.svg", "./assets/illustrations/prayer.svg", "./assets/illustrations/human.svg", "./assets/illustrations/study.svg", "./assets/illustrations/pastoral.svg", "./assets/illustrations/community.svg", "./assets/illustrations/vocation.svg", "./assets/illustrations/bible.svg"];
+self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
-self.addEventListener("fetch",event=>{
- const request=event.request;if(request.method!=="GET")return;
- const url=new URL(request.url);if(url.origin!==self.location.origin)return;
- if(/\/(auth|rest)\/v1|\/functions\/v1|\/api\//.test(url.pathname))return;
- if(request.mode==="navigate"){
-  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put("./index.html",copy));}return response;}).catch(()=>caches.match("./index.html")));
-  return;
- }
- event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request,copy));}return response;})));
-});
+self.addEventListener("fetch",event=>{const request=event.request;if(request.method!=="GET")return;const url=new URL(request.url);if(url.origin!==self.location.origin)return;if(/\/(auth|rest)\/v1|\/functions\/v1|\/api\//.test(url.pathname))return;if(request.mode==="navigate"){event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put("./index.html",copy));}return response;}).catch(()=>caches.match("./index.html")));return;}event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request,copy));}return response;})));});
