@@ -150,3 +150,15 @@ main{padding-top:24px}
 .seminary-emblem img{display:block;width:min(100%,420px);max-height:230px;object-fit:contain;border-radius:8px;background:#fff}
 .seminary-emblem span{font-weight:750;color:var(--green);font-size:1.05rem}
 .seminary-emblem small{font-size:.72rem;color:var(--muted);line-height:1.4}.seminary-emblem small a{color:var(--green);text-decoration:underline}
+
+/* Ilustrações locais da formação — disponíveis também offline */
+.dimension-card{overflow:hidden;padding:0 0 16px}
+.dimension-card img{display:block;width:100%;height:112px;object-fit:cover;margin-bottom:10px}
+.dimension-card>span,.dimension-card>strong,.dimension-card>small{margin-left:15px;margin-right:15px}
+.dimension-card>span{font-size:1.3rem}
+.seminary-scene{display:block;width:100%;max-height:240px;object-fit:cover;border-radius:15px;margin:14px 0 20px}
+.vocation-scene{max-height:220px}
+.image-source-note{margin:22px 0 4px;padding-top:12px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted)}
+.image-source-note a{color:var(--green)}
+.seminary-emblem{gap:10px}
+.seminary-emblem img{width:min(100%,420px);max-height:230px;object-fit:contain}
