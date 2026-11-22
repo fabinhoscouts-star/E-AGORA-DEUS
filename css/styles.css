@@ -144,3 +144,9 @@ main{padding-top:24px}
 .seminary-points{padding-left:1.25rem;margin:12px 0 22px}
 .seminary-points li{margin:0 0 10px;line-height:1.55;color:var(--text)}
 .seminary-points strong{color:var(--green)}
+
+/* Emblema institucional — imagem publicada pela Vatican News */
+.seminary-emblem{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 14px;background:#f7f5ef;text-align:center}
+.seminary-emblem img{display:block;width:min(100%,420px);max-height:230px;object-fit:contain;border-radius:8px;background:#fff}
+.seminary-emblem span{font-weight:750;color:var(--green);font-size:1.05rem}
+.seminary-emblem small{font-size:.72rem;color:var(--muted);line-height:1.4}
