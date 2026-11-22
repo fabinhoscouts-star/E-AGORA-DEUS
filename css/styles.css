@@ -162,3 +162,8 @@ main{padding-top:24px}
 .image-source-note a{color:var(--green)}
 .seminary-emblem{gap:10px}
 .seminary-emblem img{width:min(100%,420px);max-height:230px;object-fit:contain}
+
+.feature-scene{display:block;width:100%;max-height:210px;object-fit:cover;border-radius:16px;margin:16px 0 20px}
+.word-intro-card img{display:block;width:min(100%,440px);height:145px;object-fit:cover;border-radius:12px;margin:0 auto 12px}
+.seminary-emblem{min-height:0;padding:12px;background:transparent;border-radius:0}
+.seminary-emblem img{display:block;width:min(100%,480px);max-height:260px;object-fit:contain;border-radius:8px;background:#fff}
