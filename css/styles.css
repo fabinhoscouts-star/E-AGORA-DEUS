@@ -97,3 +97,56 @@ main{padding-top:24px}
 .site-footer p{max-width:700px;margin:0 auto 8px;color:var(--green);font-weight:700}
 .site-footer small{font-size:.75rem}
 @media(max-width:520px){.site-footer{padding:18px 16px 100px;font-size:.8rem}}
+
+
+/* Gamificação saudável, participação e aprofundamento da Palavra */
+.score-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0;padding:11px 14px;border:1px solid #e6dfcf;border-radius:12px;background:#fffdf7;color:var(--green);font-size:.88rem}
+.score-strip strong{font-weight:850}.score-strip span{color:var(--muted);font-size:.8rem;text-align:right}
+.young-response{margin:18px 0;padding:16px;border:1px solid #e7e0d1;border-radius:14px;background:#fffdf8}
+.response-private{margin:7px 0;color:var(--muted);font-size:.78rem}
+.reflection-feedback{margin-top:12px}.reflection-feedback ul{padding-left:20px}
+.game-finish{max-width:680px;margin:0 auto;text-align:center;padding:12px 0}
+.finish-confetti{font-size:2.2rem;color:#b38a36;letter-spacing:.4em}
+.score-total{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto;padding:16px;border-radius:16px;background:#edf4ef;color:var(--green);max-width:300px}
+.score-total strong{font-size:2.8rem;line-height:1}.score-total span{max-width:110px;text-align:left;font-size:.86rem;font-weight:700}
+.verse-prize{margin:20px 0;padding:22px;border:1px solid #e5d6b4;border-radius:18px;background:linear-gradient(145deg,#fff8e8,#fffdf8);text-align:left}
+.verse-prize small{color:#8b6b2e;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.verse-prize h3{margin:10px 0;color:var(--green)}.verse-prize blockquote{margin:10px 0;padding:14px 16px;border-left:4px solid var(--gold);background:#fff;color:#3f493f;font-family:Georgia,serif;font-size:1.08rem}
+.save-status{margin-top:10px;color:var(--green);font-size:.86rem}
+.bottle-stage{position:relative;width:min(86vw,360px);aspect-ratio:1;margin:22px auto 12px;display:grid;place-items:center}
+.colour-wheel{position:relative;width:100%;height:100%;border-radius:50%;border:8px solid #fff;box-shadow:0 8px 28px #1c38251f;background:conic-gradient(#b94c45 0deg 60deg,#d6ad55 60deg 120deg,#43866a 120deg 180deg,#477ca5 180deg 240deg,#84649b 240deg 300deg,#d88745 300deg 360deg);transition:transform 2.4s cubic-bezier(.12,.72,.12,1)}
+.colour-wheel.wheel-spinning{will-change:transform}
+.wheel-label{position:absolute;left:50%;top:50%;color:#fff;font-size:.76rem;font-weight:850;text-shadow:0 1px 4px #0008;transform-origin:0 0}
+.label-0{transform:rotate(30deg) translate(78px,-10px)}.label-1{transform:rotate(90deg) translate(78px,-10px)}.label-2{transform:rotate(150deg) translate(78px,-10px)}.label-3{transform:rotate(210deg) translate(78px,-10px)}.label-4{transform:rotate(270deg) translate(78px,-10px)}.label-5{transform:rotate(330deg) translate(78px,-10px)}
+.bottle-pointer{position:absolute;z-index:4;top:-12px;left:calc(50% - 13px);font-size:1.8rem;color:#243b2d;text-shadow:0 2px 3px #fff}
+.bottle-center{position:absolute;z-index:3;display:grid;place-items:center;width:76px;height:76px;border:5px solid #fff;border-radius:50%;background:#fffdf8;font-size:2.4rem;box-shadow:0 4px 14px #0002;transition:transform 2.4s cubic-bezier(.12,.72,.12,1)}
+.colour-key{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;margin:10px 0 20px}
+.colour-key span{display:flex;align-items:center;gap:5px;font-size:.76rem;color:var(--muted)}.colour-key i{width:11px;height:11px;border-radius:50%}
+.spin-button{display:block;margin:16px auto}
+.selected-colour{display:flex;align-items:center;gap:10px;margin:12px 0;padding:12px;border-radius:12px;background:#f8f5eb;color:var(--green)}
+.selected-colour span{width:22px;height:22px;border-radius:50%;background:var(--selected)}
+.word-deep-hero{padding:20px;border-radius:16px;background:linear-gradient(135deg,#174c3c,#2c6a50);color:#fff;margin:16px 0 22px}
+.word-deep-hero h2{color:#fff;margin:4px 0}.word-deep-hero p:last-child{margin-bottom:0;color:#eaf0e9}
+.lectio-step{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:16px 4px;border-bottom:1px solid var(--line)}
+.lectio-step>span{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#f0e4c7;color:#785d27;font-weight:850}
+.lectio-step h3{margin:2px 0 7px;color:var(--green)}.lectio-step p{margin:6px 0;color:#4d584f}
+.reflection-question{padding:10px 12px;border-left:3px solid var(--gold);background:#fbf8ef;border-radius:6px;font-weight:650}
+.word-journal{margin:22px 0;padding:18px;border:1px solid #e4dbc8;border-radius:15px;background:#fffdf8}
+.word-journal h3{margin:3px 0 10px;color:var(--green)}
+.word-challenge{margin:16px 0;padding:16px;border-radius:14px;background:#edf4ef;color:var(--green)}
+.saved-verses{margin-top:24px;padding:16px;border-top:2px solid var(--gold);background:#fffdf8;border-radius:12px}
+.saved-verses h3{margin-top:0;color:var(--green)}.saved-verses p{padding:9px 0;border-bottom:1px solid var(--line);font-size:.88rem}
+@media(max-width:520px){.score-strip{align-items:flex-start}.wheel-label{font-size:.67rem}.label-0{transform:rotate(30deg) translate(65px,-8px)}.label-1{transform:rotate(90deg) translate(65px,-8px)}.label-2{transform:rotate(150deg) translate(65px,-8px)}.label-3{transform:rotate(210deg) translate(65px,-8px)}.label-4{transform:rotate(270deg) translate(65px,-8px)}.label-5{transform:rotate(330deg) translate(65px,-8px)}}
+
+/* Orientações dos jogos e informação institucional */
+.game-guide{margin:12px 0 18px;padding:13px 15px;border-left:3px solid var(--gold);background:#f8f5eb;border-radius:9px;color:#465348;font-size:.9rem;line-height:1.55}
+.game-guide strong{color:var(--green)}
+.seminary-points{padding-left:1.25rem;margin:12px 0 22px}
+.seminary-points li{margin:0 0 10px;line-height:1.55;color:var(--text)}
+.seminary-points strong{color:var(--green)}
+
+/* Emblema institucional — imagem publicada pela Vatican News */
+.seminary-emblem{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 14px;background:#f7f5ef;text-align:center}
+.seminary-emblem img{display:block;width:min(100%,420px);max-height:230px;object-fit:contain;border-radius:8px;background:#fff}
+.seminary-emblem span{font-weight:750;color:var(--green);font-size:1.05rem}
+.seminary-emblem small{font-size:.72rem;color:var(--muted);line-height:1.4}.seminary-emblem small a{color:var(--green);text-decoration:underline}

@@ -51,96 +51,156 @@ export const who = [
 ];
 export const truth = {
  truth:[
- ["Fé e relação com Deus","Que momento do teu dia gostarias de reservar para Deus?","Mateus 7,7"],
- ["Fé e relação com Deus","O que te ajuda a manter a esperança quando rezas e não encontras logo resposta?","Mateus 7,7"],
- ["Fé e relação com Deus","Que pergunta gostarias de fazer a Deus hoje?","Mateus 7,7"],
- ["Fé e relação com Deus","Que pessoa te ensinou algo importante sobre a fé?","Mateus 7,7"],
- ["Fé e relação com Deus","O que significa confiar em Deus numa fase incerta?","Mateus 7,7"],
+ ["Fé e relação com Deus","Que momento do teu dia gostarias de reservar para Deus?","Salmo 63,2"],
+ ["Fé e relação com Deus","O que te ajuda a manter a esperança quando rezas e não encontras logo resposta?","Filipenses 4,6-7"],
+ ["Fé e relação com Deus","Que pergunta gostarias de fazer a Deus hoje?","Salmo 139,1-4"],
+ ["Fé e relação com Deus","Que pessoa te ensinou algo importante sobre a fé?","2 Timóteo 1,5"],
+ ["Fé e relação com Deus","O que significa confiar em Deus numa fase incerta?","Provérbios 3,5-6"],
  ["Escolhas e decisões","Que decisão recente te ensinou alguma coisa?","Deuteronómio 30,19"],
- ["Escolhas e decisões","Que valor não gostarias de negociar?","Deuteronómio 30,19"],
- ["Escolhas e decisões","Quando sentes pressão dos outros, como procuras decidir?","Deuteronómio 30,19"],
- ["Escolhas e decisões","Que escolha gostarias de fazer com mais coragem?","Deuteronómio 30,19"],
- ["Escolhas e decisões","Quem te ajuda a pensar antes de decidir?","Deuteronómio 30,19"],
- ["Amizade e relações","O que mais valorizas numa amizade verdadeira?","João 13,34"],
- ["Amizade e relações","Como costumas pedir desculpa quando magoas alguém?","João 13,34"],
- ["Amizade e relações","Que gesto de amizade nunca esqueceste?","João 13,34"],
- ["Amizade e relações","O que é mais difícil: perdoar ou pedir perdão? Porquê?","João 13,34"],
- ["Amizade e relações","Como podes acolher alguém que se sente de fora?","João 13,34"],
+ ["Escolhas e decisões","Que valor não gostarias de negociar?","Tiago 1,5"],
+ ["Escolhas e decisões","Quando sentes pressão dos outros, como procuras decidir?","Provérbios 15,22"],
+ ["Escolhas e decisões","Que escolha gostarias de fazer com mais coragem?","Josué 1,9"],
+ ["Escolhas e decisões","Quem te ajuda a pensar antes de decidir?","Lucas 14,28"],
+ ["Amizade e relações","O que mais valorizas numa amizade verdadeira?","João 15,12-13"],
+ ["Amizade e relações","Como costumas pedir desculpa quando magoas alguém?","Mateus 18,15"],
+ ["Amizade e relações","Que gesto de amizade nunca esqueceste?","Sirácida 6,14"],
+ ["Amizade e relações","O que é mais difícil: perdoar ou pedir perdão? Porquê?","Colossenses 3,13"],
+ ["Amizade e relações","Como podes acolher alguém que se sente de fora?","Romanos 12,10"],
  ["Sonhos e futuro","Que sonho gostarias de trabalhar este ano?","Salmo 37,5"],
- ["Sonhos e futuro","Que qualidade precisas de desenvolver para alcançar um objectivo?","Salmo 37,5"],
- ["Sonhos e futuro","O que te entusiasma quando pensas no futuro?","Salmo 37,5"],
- ["Sonhos e futuro","Que receio gostarias de enfrentar com acompanhamento?","Salmo 37,5"],
- ["Sonhos e futuro","Como distingues um sonho teu de uma expectativa dos outros?","Salmo 37,5"],
+ ["Sonhos e futuro","Que qualidade precisas de desenvolver para alcançar um objectivo?","Filipenses 3,13-14"],
+ ["Sonhos e futuro","O que te entusiasma quando pensas no futuro?","Provérbios 16,3"],
+ ["Sonhos e futuro","Que receio gostarias de enfrentar com acompanhamento?","Isaías 41,10"],
+ ["Sonhos e futuro","Como distingues um sonho teu de uma expectativa dos outros?","Jeremias 29,11"],
  ["Vida pessoal e autoconhecimento","Que aspecto de ti aprendeste a aceitar melhor?","Salmo 139,14"],
- ["Vida pessoal e autoconhecimento","Em que situação gostarias de ter reagido de outra maneira?","Salmo 139,14"],
- ["Vida pessoal e autoconhecimento","Que hábito gostarias de melhorar?","Salmo 139,14"],
- ["Vida pessoal e autoconhecimento","O que te ajuda a recuperar a serenidade?","Salmo 139,14"],
- ["Vida pessoal e autoconhecimento","Que qualidade tua gostarias de colocar mais ao serviço dos outros?","Salmo 139,14"],
- ["Sociedade e mundo actual","Que problema da tua comunidade mais te preocupa?","Mateus 7,12"],
- ["Sociedade e mundo actual","Como podes contribuir para um ambiente mais justo?","Mateus 7,12"],
- ["Sociedade e mundo actual","Que atitude nas redes sociais gostarias de mudar?","Mateus 7,12"],
- ["Sociedade e mundo actual","O que significa respeitar quem pensa de maneira diferente?","Mateus 7,12"],
- ["Sociedade e mundo actual","Que pequena acção pode melhorar a tua comunidade?","Mateus 7,12"]
+ ["Vida pessoal e autoconhecimento","Em que situação gostarias de ter reagido de outra maneira?","2 Coríntios 12,9"],
+ ["Vida pessoal e autoconhecimento","Que hábito gostarias de melhorar?","Colossenses 3,23"],
+ ["Vida pessoal e autoconhecimento","O que te ajuda a recuperar a serenidade?","Filipenses 4,6-7"],
+ ["Vida pessoal e autoconhecimento","Que qualidade tua gostarias de colocar mais ao serviço dos outros?","1 Pedro 4,10"],
+ ["Sociedade e mundo actual","Que problema da tua comunidade mais te preocupa?","Miqueias 6,8"],
+ ["Sociedade e mundo actual","Como podes contribuir para um ambiente mais justo?","Mateus 25,35-40"],
+ ["Sociedade e mundo actual","Que atitude nas redes sociais gostarias de mudar?","Efésios 4,29"],
+ ["Sociedade e mundo actual","O que significa respeitar quem pensa de maneira diferente?","Romanos 12,18"],
+ ["Sociedade e mundo actual","Que pequena acção pode melhorar a tua comunidade?","Jeremias 29,7"]
  ],
  dare:[
  ["Gratidão","Diz em voz alta três coisas pelas quais estás grato hoje.","1 Tessalonicenses 5,18"],
- ["Gratidão","Agradece a alguém do grupo por uma atitude concreta.","1 Tessalonicenses 5,18"],
- ["Gratidão","Partilha uma memória simples que te fez feliz.","1 Tessalonicenses 5,18"],
- ["Gratidão","Escreve uma mensagem de agradecimento a alguém, sem a publicar.","1 Tessalonicenses 5,18"],
- ["Gratidão","Nomeia uma pessoa que te ajudou a crescer e explica como.","1 Tessalonicenses 5,18"],
- ["Amizade e solidariedade","Convida alguém que está mais calado a participar, sem pressionar.","Gálatas 6,2"],
+ ["Gratidão","Agradece a alguém do grupo por uma atitude concreta.","Colossenses 3,15"],
+ ["Gratidão","Partilha uma memória simples que te fez feliz.","Salmo 118,24"],
+ ["Gratidão","Escreve uma mensagem de agradecimento a alguém, sem a publicar.","Filipenses 4,6"],
+ ["Gratidão","Nomeia uma pessoa que te ajudou a crescer e explica como.","1 Coríntios 12,4-6"],
+ ["Amizade e solidariedade","Convida alguém que está mais calado a participar, sem pressionar.","Romanos 12,10"],
  ["Amizade e solidariedade","Propõe um gesto de ajuda que o grupo possa realizar esta semana.","Gálatas 6,2"],
- ["Amizade e solidariedade","Diz uma qualidade positiva da pessoa à tua direita.","Gálatas 6,2"],
- ["Amizade e solidariedade","Escuta durante um minuto alguém sem interromper.","Gálatas 6,2"],
- ["Amizade e solidariedade","Partilha uma ideia para acolher melhor quem chega novo ao grupo.","Gálatas 6,2"],
- ["Coragem e expressão","Fala durante 30 segundos sobre algo em que acreditas.","Josué 1,9"],
+ ["Amizade e solidariedade","Diz uma qualidade positiva da pessoa à tua direita.","Filipenses 2,3-4"],
+ ["Amizade e solidariedade","Escuta durante um minuto alguém sem interromper.","Tiago 1,19"],
+ ["Amizade e solidariedade","Partilha uma ideia para acolher melhor quem chega novo ao grupo.","Romanos 15,7"],
+ ["Coragem e expressão","Fala durante 30 segundos sobre algo em que acreditas.","2 Timóteo 1,7"],
  ["Coragem e expressão","Conta uma situação em que tiveste de superar a vergonha.","Josué 1,9"],
- ["Coragem e expressão","Escolhe uma palavra que represente a tua esperança e explica-a.","Josué 1,9"],
- ["Coragem e expressão","Diz uma coisa boa que gostarias de começar, mesmo com receio.","Josué 1,9"],
- ["Coragem e expressão","Partilha uma aprendizagem que nasceu de uma dificuldade.","Josué 1,9"],
+ ["Coragem e expressão","Escolhe uma palavra que represente a tua esperança e explica-a.","1 Pedro 3,15"],
+ ["Coragem e expressão","Diz uma coisa boa que gostarias de começar, mesmo com receio.","Salmo 27,1"],
+ ["Coragem e expressão","Partilha uma aprendizagem que nasceu de uma dificuldade.","Romanos 5,3-5"],
  ["Fé e espiritualidade","Faz uma oração espontânea de uma frase, se te sentires confortável.","Lucas 11,1"],
- ["Fé e espiritualidade","Escolhe uma intenção pela qual o grupo possa rezar.","Lucas 11,1"],
- ["Fé e espiritualidade","Recorda uma passagem bíblica que te acompanha.","Lucas 11,1"],
- ["Fé e espiritualidade","Propõe um momento breve de silêncio para o grupo.","Lucas 11,1"],
- ["Fé e espiritualidade","Diz que atitude gostarias de viver com mais fé esta semana.","Lucas 11,1"],
+ ["Fé e espiritualidade","Escolhe uma intenção pela qual o grupo possa rezar.","Filipenses 4,6"],
+ ["Fé e espiritualidade","Recorda uma passagem bíblica que te acompanha.","Salmo 119,105"],
+ ["Fé e espiritualidade","Propõe um momento breve de silêncio para o grupo.","Mateus 6,6"],
+ ["Fé e espiritualidade","Diz que atitude gostarias de viver com mais fé esta semana.","Colossenses 3,16"],
  ["Criatividade e diversão","Inventa um lema positivo para o grupo.","Filipenses 4,4"],
- ["Criatividade e diversão","Representa sem palavras uma qualidade humana para os outros adivinharem.","Filipenses 4,4"],
- ["Criatividade e diversão","Cria uma pequena rima sobre amizade.","Filipenses 4,4"],
- ["Criatividade e diversão","Dá um título divertido e respeitoso ao encontro de hoje.","Filipenses 4,4"],
- ["Criatividade e diversão","Desenha no ar um símbolo de esperança e explica-o.","Filipenses 4,4"],
+ ["Criatividade e diversão","Representa sem palavras uma qualidade humana para os outros adivinharem.","Provérbios 17,22"],
+ ["Criatividade e diversão","Cria uma pequena rima sobre amizade.","Efésios 4,29"],
+ ["Criatividade e diversão","Dá um título divertido e respeitoso ao encontro de hoje.","Colossenses 3,17"],
+ ["Criatividade e diversão","Desenha no ar um símbolo de esperança e explica-o.","Romanos 12,15"],
  ["Compromisso e acção","Assume um pequeno gesto de serviço para esta semana.","1 João 3,18"],
- ["Compromisso e acção","Propõe uma forma de reduzir o desperdício no grupo.","1 João 3,18"],
- ["Compromisso e acção","Escolhe uma tarefa comunitária que possas realizar sem esperar reconhecimento.","1 João 3,18"],
- ["Compromisso e acção","Pensa numa pessoa que precisa de companhia e planeia contactá-la.","1 João 3,18"],
- ["Compromisso e acção","Diz uma atitude concreta para promover a paz à tua volta.","1 João 3,18"]
+ ["Compromisso e acção","Propõe uma forma de reduzir o desperdício no grupo.","Tiago 2,17"],
+ ["Compromisso e acção","Escolhe uma tarefa comunitária que possas realizar sem esperar reconhecimento.","Colossenses 3,23"],
+ ["Compromisso e acção","Pensa numa pessoa que precisa de companhia e planeia contactá-la.","Mateus 5,9"],
+ ["Compromisso e acção","Diz uma atitude concreta para promover a paz à tua volta.","1 Pedro 4,10"]
  ]
 };
 export const bottle = [
  ...[
   ["Vermelho","Coração aberto",["Conta uma lembrança que te faz sorrir.","Que pessoa te inspira a ser melhor?","O que valorizas numa amizade?","Partilha algo pelo qual estás grato.","O que te faz sentir acolhido?"],"1 Coríntios 13,4-7"],
-  ["Amarelo","Desafia a tua mente",["Quantos são os Evangelhos?","Quem construiu a arca?","Quem recebeu os Dez Mandamentos?","Em que ocasião Jesus transformou água em vinho?","Em que livro bíblico encontramos o Apocalipse?"],"Bíblia"],
+  ["Amarelo","Desafia a tua mente",["Quantos são os Evangelhos?","Quem construiu a arca, segundo a Bíblia?","Em que ocasião Jesus transformou água em vinho?","Qual é o último livro da Bíblia?","Quem recebeu os Dez Mandamentos?"],["Mateus, Marcos, Lucas e João","Génesis 6–9","João 2,1-11","Apocalipse 1,1-3","Êxodo 20,1-17"]],
   ["Verde","Atitude em acção",["Que gesto de solidariedade podes fazer esta semana?","Como podes ajudar alguém sem esperar recompensa?","Que necessidade da tua comunidade podes atender?","Como podes defender alguém que é excluído?","Que pequeno serviço podes oferecer hoje?"],"Tiago 2,17"],
-  ["Azul","Encontro com a Palavra",["Que passagem bíblica te dá esperança?","O que significa servir como Jesus?","Que palavra gostarias de guardar no coração?","Como encontras silêncio para rezar?","Que ensinamento de Jesus gostarias de viver melhor?"],"Romanos 15,4"],
+  ["Azul","Encontro com a Palavra",["Que passagem bíblica te dá esperança?","Que atitude de Jesus gostarias de imitar no teu dia a dia?","Se pudesses fazer uma pergunta a Jesus, qual seria?","Completa a frase: Para mim, rezar significa…","Que palavra associas à tua fé e porquê?"],["Romanos 15,4","João 13,12-15","Mateus 11,28-30","Mateus 6,6","Hebreus 11,1"]],
   ["Roxo","Conhece o outro",["Faz uma pergunta respeitosa a alguém do grupo.","Que qualidade admiras numa pessoa do grupo?","Como podes escutar melhor os outros?","O que ajuda a resolver um conflito?","Como acolhes alguém diferente de ti?"],"Romanos 12,10"],
   ["Laranja","Surpresa!",["Inventa uma frase de incentivo para o grupo.","Cria um gesto de paz para o grupo.","Diz uma frase que anime alguém.","Inventa um símbolo de esperança.","Propõe um desafio saudável para todos."],"1 Timóteo 4,12"]
- ].flatMap(([colour,category,prompts,reference])=>prompts.map((prompt,i)=>({colour,category,prompt,reference,answer:colour==="Amarelo"?["Quatro.","Noé.","Moisés.","Nas bodas de Caná (João 2,1-11).","No Apocalipse."][i]:null})))
+ ].flatMap(([colour,category,prompts,reference])=>prompts.map((prompt,i)=>({colour,category,prompt,reference:Array.isArray(reference)?reference[i]:reference,answer:colour==="Amarelo"?["Quatro: Mateus, Marcos, Lucas e João.","Noé. A narrativa encontra-se em Génesis 6–9.","Nas bodas de Caná, onde Jesus transformou a água em vinho.","Apocalipse, que encerra o Novo Testamento.","Moisés, no contexto da aliança no Sinai."][i]:null})))
 ];
 export const whatif = [
- ["Família","Em casa começa uma discussão e todos falam ao mesmo tempo. Como podes contribuir para acalmar a situação?","Efésios 4,26-27"],
- ["Família","Alguém da família precisa de ajuda, mas tens outras tarefas. Como organizas as prioridades?","Gálatas 6,2"],
- ["Família","A tua família não compreende uma decisão importante que estás a considerar. Como podes abrir diálogo?","Provérbios 15,22"],
- ["Amizades","O teu grupo começa a gozar com alguém. O que podes fazer sem humilhar ninguém?","Mateus 7,12"],
- ["Amizades","Um amigo conta-te que está a passar por um momento difícil. Como o acompanhas?","Sirácida 6,14"],
- ["Amizades","Um amigo convida-te a participar numa atitude que sabes ser errada. Como respondes?","Efésios 4,25"],
- ["Escola e futuro","Tens oportunidade de copiar num teste sem seres visto. O que está em causa?","Provérbios 10,9"],
- ["Escola e futuro","Esforçaste-te e tiveste um resultado abaixo do esperado. Como podes reagir?","Filipenses 3,13-14"],
- ["Escola e futuro","Tens de escolher um caminho, mas ainda não tens certezas. Que passos podes dar?","Lucas 14,28"],
- ["Sociedade","Encontras uma pessoa a precisar de ajuda na rua. Como podes agir com segurança e respeito?","Mateus 25,35-40"],
- ["Sociedade","Presencias uma situação de violência. Como podes procurar ajuda e proteger quem está em risco?","Mateus 5,9"],
- ["Sociedade","Vês uma injustiça num espaço público. Como podes dar voz a quem está a ser prejudicado?","Provérbios 31,8-9"],
- ["Vida cristã","Os teus amigos fazem comentários depreciativos sobre a tua fé. Como podes responder com respeito?","1 Pedro 3,15"],
- ["Vida cristã","Alguém te pede perdão, mas ainda estás magoado. Como podes iniciar um caminho de reconciliação?","Colossenses 3,13"],
- ["Vida cristã","Assumiste um compromisso na comunidade e estás sem vontade de participar. O que podes fazer?","Hebreus 10,24-25"]
+ {category:"Família",prompt:"Tiveste um dia difícil e, ao chegares a casa, um familiar chama-te à atenção por algo que fizeste. Sentes que não compreende o teu lado e a conversa começa a ficar tensa.",reference:"Efésios 4,26-27",teaching:"Os conflitos devem ser enfrentados sem alimentar o ressentimento. É importante saber falar, escutar e procurar a reconciliação.",reflection:"Quando alguém te chama à atenção, consegues escutar antes de responder?",choices:[
+  {text:"Responder da mesma maneira, porque também tenho direito de me defender.",consequence:"A discussão pode aumentar e tornar mais difícil compreender o que cada pessoa está a sentir."},
+  {text:"Procurar manter a calma e explicar o meu lado, mesmo estando magoado.",consequence:"O diálogo pode ajudar a esclarecer o problema e a compreender melhor os dois lados. Não significa concordar com tudo, mas procurar resolver o conflito com respeito.",recommended:true},
+  {text:"Sair da conversa e não voltar a falar sobre o assunto.",consequence:"Afastar-se pode dar algum tempo para acalmar, mas evitar sempre a conversa deixa o problema por resolver."}
+ ]},
+ {category:"Família",prompt:"Os teus pais ou responsáveis pedem-te ajuda numa tarefa doméstica, mas tens outros planos: queres sair com os amigos ou ficar no telemóvel. Achas que já tens demasiadas responsabilidades.",reference:"Gálatas 6,2",teaching:"A vida em família implica colaboração. Cada pessoa pode contribuir para o bem de todos, sem deixar que uma só pessoa carregue todas as responsabilidades.",reflection:"Costumas ajudar em casa por iniciativa própria ou apenas quando te pedem?",choices:[
+  {text:"Recusar, porque também preciso de tempo para mim.",consequence:"Podes proteger o teu tempo, mas a recusa sem diálogo pode deixar as responsabilidades todas sobre os outros."},
+  {text:"Ajudar primeiro e organizar o meu tempo para cumprir os outros planos.",consequence:"Mostras que sabes conciliar os teus interesses com as necessidades da família. A responsabilidade também se aprende nas pequenas tarefas do dia a dia.",recommended:true},
+  {text:"Fazer a tarefa rapidamente, sem me preocupar muito com a qualidade.",consequence:"A tarefa pode ficar mal feita e transmitir que ajudar é apenas uma obrigação a despachar."}
+ ]},
+ {category:"Família",prompt:"Tens um sonho ou um projecto para o teu futuro, mas a tua família pensa de maneira diferente e insiste que deves seguir outro caminho. Começas a sentir que ninguém respeita a tua vontade.",reference:"Provérbios 15,22",teaching:"Pedir conselho não significa entregar aos outros a decisão sobre a nossa vida. Significa reconhecer que podemos crescer através da experiência e da escuta dos outros.",reflection:"Sabes escutar os conselhos da tua família sem deixar de assumir as tuas próprias decisões?",choices:[
+  {text:"Seguir o meu sonho sem dar explicações a ninguém.",consequence:"Podes afirmar a tua vontade, mas sem diálogo arriscas perder conselhos importantes e aumentar o conflito."},
+  {text:"Conversar com a família, explicar os meus motivos e escutar as suas preocupações.",consequence:"A conversa pode ajudar a construir confiança e a encontrar um caminho mais consciente. Nem sempre haverá acordo imediato, mas escutar e explicar são passos importantes.",recommended:true},
+  {text:"Desistir do meu projecto para evitar conflitos.",consequence:"Podes evitar uma discussão no momento, mas corres o risco de deixar de lado uma escolha importante sem a teres discernido."}
+ ]},
+ {category:"Amizades",prompt:"Estás com um grupo de amigos e alguém começa a gozar com um colega que não está presente. Todos riem e esperam que também participes para não ficares de fora.",reference:"Mateus 7,12",teaching:"Jesus convida-nos a tratar os outros com a mesma dignidade e consideração que esperamos receber. Não devemos fazer dos outros motivo de humilhação.",reflection:"Até que ponto estás disposto a contrariar o grupo quando sabes que algo não está certo?",choices:[
+  {text:"Participar nas brincadeiras para não ser excluído.",consequence:"Podes ser aceite pelo grupo naquele momento, mas contribuis para uma atitude que pode magoar e humilhar outra pessoa."},
+  {text:"Não participar e mostrar que não acho correcto humilhar alguém.",consequence:"Mostras que a amizade e a diversão não devem depender da humilhação dos outros. A tua atitude pode também levar os amigos a repensarem o comportamento.",recommended:true},
+  {text:"Ficar calado e deixar que os outros continuem.",consequence:"Evitas o confronto, mas o silêncio pode ser entendido como aprovação e deixar a pessoa sem apoio."}
+ ]},
+ {category:"Amizades",prompt:"Um amigo teu está a passar por um momento difícil, mas começou a afastar-se de todos. Percebes que precisa de ajuda, embora ele diga que está tudo bem.",reference:"Sirácida 6,14",teaching:"A verdadeira amizade revela-se na disponibilidade para acompanhar, escutar e ajudar, respeitando a confiança do outro. Se houver risco ou sofrimento grave, é importante procurar apoio de um adulto de confiança ou de um profissional.",reflection:"Que tipo de amigo és quando alguém deixa de estar bem?",choices:[
+  {text:"Respeitar o seu espaço e não voltar a perguntar sobre o assunto.",consequence:"Respeitar o espaço é importante, mas desaparecer por completo pode aumentar a sensação de isolamento."},
+  {text:"Procurar conversar, mostrar disponibilidade e ajudá-lo a encontrar apoio se necessário.",consequence:"O teu amigo pode sentir que não está sozinho. Se a situação for grave, procurar ajuda adequada pode fazer diferença.",recommended:true},
+  {text:"Contar aos outros amigos para que todos saibam o que está a acontecer.",consequence:"Divulgar o que te foi confiado pode quebrar a confiança e expor o teu amigo sem necessidade."}
+ ]},
+ {category:"Amizades",prompt:"Um amigo pede-te que mintas por ele para o ajudar a escapar de uma situação complicada. Sabes que a mentira pode prejudicar outra pessoa, mas não queres perder a amizade.",reference:"Efésios 4,25",teaching:"A amizade não significa apoiar todas as atitudes do outro. Ser verdadeiro também é saber aconselhar e ajudar alguém a reconhecer os seus erros.",reflection:"Consegues dizer a verdade a um amigo, mesmo quando sabes que ele pode ficar chateado?",choices:[
+  {text:"Mentir, porque um amigo deve estar sempre ao lado do outro.",consequence:"Podes protegê-lo por algum tempo, mas a mentira pode prejudicar outra pessoa e tornar o problema maior."},
+  {text:"Recusar a mentira e aconselhá-lo a assumir a responsabilidade.",consequence:"A tua atitude pode ser difícil de aceitar para o teu amigo, mas ajuda-o a enfrentar as consequências e mostra que a amizade também exige verdade.",recommended:true},
+  {text:"Não dizer nada, deixando que a situação se resolva sozinha.",consequence:"O silêncio pode parecer a saída mais fácil, mas não ajuda o teu amigo a assumir a responsabilidade."}
+ ]},
+ {category:"Escola e futuro",prompt:"Durante um teste, percebes que um colega tem as respostas e oferece-te a possibilidade de copiares. Não estudaste o suficiente e tens medo de tirar uma nota negativa.",reference:"Provérbios 10,9",teaching:"A honestidade deve acompanhar-nos mesmo quando ninguém está a observar. O valor de uma conquista também está na maneira como foi alcançada.",reflection:"Preferes uma boa nota obtida sem honestidade ou um resultado mais baixo que represente o teu verdadeiro esforço?",choices:[
+  {text:"Copiar algumas respostas para garantir uma nota positiva.",consequence:"Podes obter uma nota melhor, mas ela não representa o que aprendeste e pode comprometer a tua honestidade."},
+  {text:"Fazer o teste com aquilo que sei e assumir o resultado.",consequence:"Talvez não tenhas a nota desejada, mas reconheces os teus limites e identificas o que precisas de melhorar.",recommended:true},
+  {text:"Copiar agora e prometer que vou estudar melhor da próxima vez.",consequence:"A promessa de estudar depois não torna honesta a decisão de copiar agora."}
+ ]},
+ {category:"Escola e futuro",prompt:"Estudaste para um exame, mas o resultado foi muito inferior ao que esperavas. Começas a pensar que não tens capacidade para alcançar os teus objectivos e sentes vontade de desistir.",reference:"Filipenses 3,13-14",teaching:"A caminhada exige esforço e perseverança. Um fracasso pode fazer parte do percurso, mas não precisa de ser o ponto final.",reflection:"Quando falhas, procuras aprender com o erro ou deixas que ele determine o que pensas sobre ti?",choices:[
+  {text:"Desistir, porque talvez não tenha capacidade para continuar.",consequence:"Desistir de imediato impede-te de perceber o que ainda podes aprender e melhorar."},
+  {text:"Procurar perceber onde falhei e preparar-me melhor para a próxima oportunidade.",consequence:"Transformas a dificuldade numa oportunidade de aprendizagem. Reconhecer os erros permite melhorar e preparar novas tentativas.",recommended:true},
+  {text:"Culpar o professor e dizer que o resultado foi injusto.",consequence:"Pode ter havido dificuldades na avaliação, mas culpar alguém sem analisar o teu próprio percurso não te ajuda a avançar."}
+ ]},
+ {category:"Escola e futuro",prompt:"Tens de escolher um curso ou uma profissão. Os teus amigos já sabem o que querem fazer e começam a pressionar-te para seguires o mesmo caminho, embora ainda tenhas dúvidas sobre o teu futuro.",reference:"Lucas 14,28",teaching:"As decisões importantes exigem reflexão e preparação. Procurar informação, conversar com pessoas experientes e conhecer as tuas capacidades pode ajudar-te a escolher.",reflection:"Estás a construir o teu futuro com consciência ou apenas a seguir as escolhas de quem está à tua volta?",choices:[
+  {text:"Escolher o mesmo curso dos meus amigos para não ficar sozinho.",consequence:"A companhia dos amigos pode ser importante, mas não garante que esse caminho corresponda às tuas capacidades e interesses."},
+  {text:"Conhecer melhor as minhas capacidades, interesses e possibilidades antes de decidir.",consequence:"Dás espaço a uma decisão mais consciente e responsável, sem te deixares levar apenas pela pressão do grupo.",recommended:true},
+  {text:"Escolher o curso que parece dar mais dinheiro, sem pensar noutras questões.",consequence:"As condições económicas são importantes, mas não devem ser o único critério numa decisão que envolve toda a tua vida."}
+ ]},
+ {category:"Sociedade",prompt:"No caminho para casa, encontras uma pessoa em situação de pobreza a pedir ajuda. Tens pouco dinheiro contigo e também tens as tuas próprias necessidades.",reference:"Mateus 25,35-40",teaching:"A fé manifesta-se também na atenção aos mais necessitados. Às vezes, escutar, orientar ou encaminhar para uma instituição também é uma forma de solidariedade.",reflection:"Quando encontras alguém em necessidade, procuras ver uma pessoa ou apenas alguém a pedir ajuda?",choices:[
+  {text:"Ignorar a pessoa, porque também tenho os meus problemas.",consequence:"Podes seguir o teu caminho, mas corres o risco de tratar a necessidade do outro com indiferença."},
+  {text:"Procurar ajudar dentro das minhas possibilidades, com respeito e atenção.",consequence:"Reconheces a dignidade da pessoa e procuras uma ajuda possível. Escutar, orientar ou encaminhar também pode ser uma forma de solidariedade.",recommended:true},
+  {text:"Dar dinheiro sem procurar perceber se existe outra forma de ajudar.",consequence:"A ajuda material pode ser importante, mas vale a pena considerar também a segurança, a necessidade concreta e outras formas de apoio."}
+ ]},
+ {category:"Sociedade",prompt:"Estás na rua e presencias uma discussão que começa a transformar-se numa agressão. Algumas pessoas filmam a situação com os telemóveis, enquanto outras se afastam.",reference:"Mateus 5,9",teaching:"Promover a paz não significa assistir passivamente à violência. Significa procurar caminhos seguros e responsáveis para proteger a vida e a dignidade das pessoas.",reflection:"Quando presencias uma injustiça ou violência, procuras ajudar ou limitas-te a observar?",choices:[
+  {text:"Filmar e publicar nas redes sociais para mostrar o que aconteceu.",consequence:"A divulgação pode expor as pessoas envolvidas, agravar o conflito e não garantir que alguém receba ajuda."},
+  {text:"Procurar ajuda das autoridades ou de pessoas responsáveis, sem me colocar em perigo.",consequence:"Procuras uma resposta responsável e proteges a tua segurança e a dos outros. Chamar ajuda pode ser decisivo para evitar que a situação se agrave.",recommended:true},
+  {text:"Entrar directamente na discussão para tentar separar os envolvidos.",consequence:"A intenção pode ser ajudar, mas intervir sem condições de segurança pode aumentar o perigo para todos."}
+ ]},
+ {category:"Sociedade",prompt:"Na tua comunidade, um jovem é acusado injustamente de algo que não fez. Sabes parte da verdade, mas tens receio de falar porque podes criar problemas com outras pessoas.",reference:"Provérbios 31,8-9",teaching:"A justiça exige coragem, mas também exige verdade. Não basta tomar partido; é necessário procurar compreender os factos e defender a dignidade de cada pessoa.",reflection:"Tens coragem de defender a verdade quando isso pode trazer dificuldades para ti?",choices:[
+  {text:"Ficar em silêncio para evitar problemas.",consequence:"O silêncio pode proteger-te de um conflito imediato, mas também pode deixar uma injustiça sem esclarecimento."},
+  {text:"Apresentar aquilo que sei com verdade e responsabilidade.",consequence:"Ajudas a esclarecer a situação sem inventar ou exagerar os factos. A verdade deve ser apresentada com prudência e responsabilidade.",recommended:true},
+  {text:"Defender o jovem publicamente, mesmo sem conhecer todos os factos.",consequence:"A intenção de defender alguém é importante, mas afirmar o que não sabes pode criar outra injustiça."}
+ ]},
+ {category:"Vida cristã",prompt:"Estás com os teus amigos e alguém começa a fazer comentários negativos sobre a Igreja e a fé cristã. Sabes que és cristão, mas tens receio de manifestar aquilo em que acreditas.",reference:"1 Pedro 3,15",teaching:"O testemunho cristão não se faz pela imposição. É importante saber explicar aquilo em que acreditamos, mantendo o respeito e a abertura ao diálogo.",reflection:"A tua maneira de viver demonstra aquilo em que acreditas?",choices:[
+  {text:"Ficar calado e esconder a minha fé para evitar comentários.",consequence:"Podes evitar uma conversa difícil, mas perdes a oportunidade de partilhar com serenidade aquilo que é importante para ti."},
+  {text:"Respeitar as opiniões dos outros e falar da minha fé com serenidade, se houver abertura.",consequence:"Dás testemunho da tua fé sem desrespeitar quem pensa de maneira diferente. O diálogo pode abrir espaço para uma compreensão mais profunda.",recommended:true},
+  {text:"Responder com agressividade para defender a Igreja.",consequence:"A agressividade pode afastar as pessoas e contradizer o respeito e a caridade que a própria fé ensina."}
+ ]},
+ {category:"Vida cristã",prompt:"Uma pessoa de quem gostas magoou-te profundamente. Essa pessoa pede desculpa, mas ainda sentes raiva e dificuldade em voltar a confiar nela.",reference:"Colossenses 3,13",teaching:"O perdão não apaga automaticamente a dor nem dispensa a responsabilidade de quem errou. Pode iniciar um caminho de reconciliação, respeitando o tempo e a segurança de cada pessoa.",reflection:"O que torna mais difícil perdoar alguém que te magoou?",choices:[
+  {text:"Recusar o perdão, porque quem me magoou não merece outra oportunidade.",consequence:"Podes precisar de distância e protecção, mas fechar toda a possibilidade de diálogo pode manter a ferida aberta."},
+  {text:"Procurar perdoar, dando tempo ao processo de recuperar a confiança.",consequence:"Abres espaço para a reconciliação, sem ignorar a dor que sentiste. Perdoar não significa esquecer imediatamente, justificar o erro ou aceitar que ele se repita.",recommended:true},
+  {text:"Fingir que está tudo bem, mesmo continuando a guardar ressentimento.",consequence:"Esconder a dor pode adiar a conversa necessária e dificultar uma reconciliação verdadeira."}
+ ]},
+ {category:"Vida cristã",prompt:"É domingo e tens a possibilidade de participar na celebração da Eucaristia, mas os teus amigos convidam-te para uma actividade que acontece à mesma hora. Começas a pensar que podes deixar a Igreja para outro momento.",reference:"Hebreus 10,24-25",teaching:"A vida cristã não se vive apenas individualmente. A participação na comunidade ajuda a fortalecer a fé e a caminhar com os outros.",reflection:"Que lugar ocupa Deus na organização do teu tempo e nas tuas escolhas?",choices:[
+  {text:"Aceitar o convite dos amigos e deixar a participação na Igreja para outro dia.",consequence:"A amizade é importante, mas adiar sempre a vida comunitária pode enfraquecer um compromisso que também valorizas."},
+  {text:"Organizar os meus compromissos e procurar participar na Eucaristia, valorizando também os momentos com os amigos.",consequence:"Procuras dar lugar à tua fé sem deixar de valorizar as amizades. Organizar o tempo ajuda a viver os compromissos com maior consciência.",recommended:true},
+  {text:"Ir à celebração apenas para cumprir uma obrigação, sem me preocupar com o seu significado.",consequence:"Estar presente é importante, mas a participação ganha sentido quando procuras compreender e viver aquilo que celebras."}
+ ]}
 ];
 export const word = [
  ["Confiança","Provérbios 3,5-6","Confiar em Deus não significa deixar de pensar ou agir. Significa reconhecer que não controlamos tudo e procurar caminhar com humildade.","Que situação precisas de entregar a Deus, sem deixar de assumir a tua responsabilidade?","Senhor, ensina-me a confiar em Ti e a dar com coragem o próximo passo."],
