@@ -15,6 +15,7 @@
     <button class="brand" id="brand-home" aria-label="Voltar ao início"><span class="brand-mark" aria-hidden="true">✝</span><span>Seminário Diocesano São José</span></button>
     <button class="settings-button" data-open="settings-screen" aria-label="Definições" title="Definições">⚙</button>
   </header>
+  <div class="connection-status" id="connection-status" role="status" aria-live="polite" hidden></div>
   <main id="app" tabindex="-1">
     <section class="screen active" id="home-screen">
       <div class="test-notice" role="status"><strong>Versão de teste</strong><span>Algumas informações institucionais e a política de privacidade aguardam validação. O envio de perguntas está desactivado.</span></div>
@@ -56,7 +57,27 @@
 
     <section class="screen" id="questions-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Escuta e acompanhamento</p><h1>Pergunta aos Seminaristas</h1><div class="voice-intro"><div class="voice-symbol" aria-hidden="true">♫</div><div><h2>A tua voz, em confiança</h2><p>Um espaço para escutar, esclarecer dúvidas e acompanhar quem procura compreender melhor o seu caminho.</p></div></div><div id="questions-content" class="content-panel"></div><button class="secondary return-button" data-open="home-screen">Voltar ao Menu</button></section>
 
-    <section class="screen" id="settings-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Aplicação</p><h1>Definições</h1><div class="content-panel"><h2>Privacidade e informação</h2><p>Consulta a informação sobre a forma como os dados são tratados nesta aplicação.</p><button class="secondary" data-open="privacy-screen">Política de Privacidade →</button></div></section>
+    <section class="screen" id="settings-screen"><button class="back" data-open="home-screen">← Início</button><p class="eyebrow">Aplicação</p><h1>Definições</h1><div class="content-panel"><h2>Privacidade e informação</h2><p>Consulta a informação sobre a forma como os dados são tratados nesta aplicação.</p><button class="secondary" data-open="privacy-screen">Política de Privacidade →</button></div><section class="share-card" aria-labelledby="share-title">
+  <p class="eyebrow">Partilha</p><h2 id="share-title">Leva «E AGORA, DEUS?» contigo</h2>
+  <p>Mostra este código a outro jovem ou partilha a ligação para que também possa descobrir a aplicação.</p>
+  <img class="share-qr" src="./assets/qr-e-agora-deus.svg" alt="QR-Code para abrir E AGORA, DEUS?">
+  <p class="share-url"><a href="https://e-agora-deus.fabinhoscouts.workers.dev">e-agora-deus.fabinhoscouts.workers.dev</a></p>
+  <div class="share-actions"><button class="secondary" id="share-copy">Copiar ligação</button><button class="quiet" id="share-native">Partilhar</button></div>
+  <p class="share-feedback" id="share-feedback" role="status" aria-live="polite"></p>
+</section>
+<section class="content-panel">
+  <h2>Utilização sem Internet</h2>
+  <p>Depois de abrires a aplicação com ligação à Internet e aguardares que carregue, podes voltar a utilizá-la sem ligação. Os conteúdos principais, jogos, textos e QR-Code ficam guardados neste dispositivo.</p>
+  <p class="note">A primeira abertura e a instalação precisam de Internet. A fotografia externa do Seminário e as ligações para outros sites podem não aparecer offline.</p>
+  <button class="secondary" id="install-app" hidden>Instalar aplicação</button>
+  <p class="share-feedback" id="install-feedback" role="status" aria-live="polite"></p>
+</section>
+<section class="content-panel">
+  <h2>Estatísticas de acesso</h2>
+  <p>As visitas podem ser acompanhadas pela equipa através do Cloudflare Web Analytics, sem apresentar números privados aos visitantes.</p>
+  <p class="note">A contagem ainda requer a activação do Web Analytics no painel Cloudflare e a inserção do identificador do site. Não activámos rastreio nem recolha adicional de dados nesta versão.</p>
+  <p><a class="secondary-link" href="https://dash.cloudflare.com/" target="_blank" rel="noopener noreferrer">Abrir painel Cloudflare ↗</a></p>
+</section></section>
     <section class="screen" id="privacy-screen"><button class="back" data-open="settings-screen">← Definições</button><p class="eyebrow">Definições · Privacidade</p><h1>Política de Privacidade</h1><div class="privacy-lock"><span aria-hidden="true">▣</span><p>Informação de privacidade — versão de teste</p></div><div class="content-panel privacy-list">
       <details open><summary>Estado actual da aplicação</summary><p>Esta versão é apresentada para testes. O formulário «Pergunta aos Seminaristas» apenas prepara um rascunho temporário no próprio ecrã: não envia a pergunta, não cria uma conta e não a guarda numa base de dados. As respostas e reflexões dos jogos também não são submetidas à equipa do Seminário.</p></details>
       <details><summary>Dados introduzidos pelo utilizador</summary><p>Não introduzas nomes, contactos, dados de saúde, informações familiares delicadas ou outros dados pessoais nos campos de reflexão. O rascunho da pergunta existe apenas enquanto a página permanece aberta e perde-se ao sair ou actualizar a página.</p></details>
