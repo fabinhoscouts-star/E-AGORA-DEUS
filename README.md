@@ -1,4 +1,4 @@
-# E AGORA, DEUS? — Seminário São José
+# E AGORA, DEUS? — Seminário Diocesano São José
 
 PWA de evangelização, reflexão e discernimento vocacional.
 
