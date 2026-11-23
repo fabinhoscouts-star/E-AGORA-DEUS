@@ -10,6 +10,16 @@
   "orientation": "portrait",
   "background_color": "#f8f7f1",
   "theme_color": "#174c3c",
-  "categories": ["education", "lifestyle"],
-  "icons": [{"src":"./assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+  "categories": [
+    "education",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "./assets/seminario/seminario/01-emblema-oficial.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
 }
